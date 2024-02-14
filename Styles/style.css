@@ -1,0 +1,150 @@
+/* ----- Polices ----- */
+@font-face {
+	font-family: "Harlow Solid Italic";
+	src:
+		url("../Polices/HARLOWSI.TTF");
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url("../Polices/UbuntuTitling-Bold.ttf");
+}
+
+body{
+	font-family: "Ubuntu", "Calibri";
+}
+
+/* ----- Header ----- */
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+header h1{
+	text-decoration: none;
+	font-family: "Harlow Solid Italic";
+	cursor: pointer;
+}
+
+header #bouton-menu-nav{
+	display: none;
+}
+
+header h1 a{
+	text-decoration: none;
+	color: black;
+}
+
+header nav ul{
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+header nav ul li a{
+	border-radius: 5px;
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+	padding: 16px;
+	transition: all 0.5s;
+}
+
+header nav ul li a:hover{
+	background-color: rgba(200, 200, 200, 0.5);
+}
+
+header nav ul li a:focus{
+	background-color: rgba(150, 150, 150, 0.5);
+}
+
+/* -------------- Affichage mobile --------------- */
+@media screen and (max-width: 700px) {
+	header{
+		display: flex;
+		flex-direction: column;
+	}
+
+	/* Bouton de navigation */
+	header #bouton-menu-nav{
+		position: absolute;
+		left: 16px;
+		top: 24px;
+		display: inline-block;
+		cursor: pointer;
+		background: transparent;
+		border: none;
+		padding: 10px;
+		border-radius: 5px;
+		transition: all 0.5s;
+	}
+
+	header #bouton-menu-nav > div{
+		height: 32px;
+		width: 32px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	header #bouton-menu-nav:hover{
+		background-color: rgba(200, 200, 200, 0.5);
+	}
+
+	header #bar-nav-1, header #bar-nav-2, header #bar-nav-3{
+		height: 5px;
+		width: 100%;
+		background-color: black;
+		transition: 0.4s;
+		border-radius: 5px;
+	}
+
+	#bar-nav-1 {
+		transform-origin: center;
+	}
+	
+	#bar-nav-3 {
+		transform-origin: center;
+	}
+	
+	.ouvert #bar-nav-1{
+		transform: translate(0, 14px) rotate(-45deg);
+	}
+	
+	.ouvert #bar-nav-2{
+		opacity: 0;
+	}
+	
+	.ouvert #bar-nav-3{
+		transform: translate(0, -13px) rotate(45deg);
+	}
+
+
+	header nav{
+		display: none;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		width: 100%;
+	}
+
+	header .nav-ouvert{
+		display: inline-block;
+	}
+
+	header nav ul{
+		display: inline-flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	header nav ul li{
+		width: 100%;
+	}
+
+	header nav ul li a{
+		display: inline-block;
+		width: calc(100% - 32px);
+	}
+}

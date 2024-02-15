@@ -36,8 +36,9 @@ body{
 	font-family: "Harlow Solid Italic";
 	animation-duration: 3s;
 	animation-name: titre-demarrage;
-	margin-top: 24px;
-	margin-left: 15px;
+	margin-top: calc((100vh - 50px) / 2);
+	margin-left: calc((100vw - 170px) / 2);
+	visibility: collapse;
 }
 
 @keyframes fond-demmarrage{
@@ -55,20 +56,17 @@ body{
 
 @keyframes titre-demarrage {
 	0%{
-		margin-top: calc((100vh - 50px) / 2);
-		margin-left: calc((100vw - 170px) / 2);
+		color: black;
+		visibility: visible;
 	}
 	50%{
-		margin-top: calc((100vh - 50px) / 2);
-		margin-left: calc((100vw - 170px) / 2);
+		color: black;
 	}
 	70%{
-		margin-top: 24px;
-		margin-left: calc((100vw - 170px) / 2);
+		color: transparent;
 	}
-	90%{
-		margin-top: 24px;
-		margin-left: 15px;
+	100%{
+		color: transparent;
 	}
 }
 
@@ -166,25 +164,6 @@ main{
 
 /* -------------- Affichage mobile --------------- */
 @media screen and (max-width: 800px) {
-	/* ---------- Écran de démarrage ---------- */
-	@keyframes titre-demarrage {
-		0%{
-			margin-top: calc((100vh - 50px) / 2);
-		}
-		70%{
-			margin-top: calc((100vh - 50px) / 2);
-		}
-		90%{
-			margin-top: 21px;
-		}
-	}
-
-	.demarrage h1{
-		padding: 5px;
-		margin-top: 21px;
-		margin-left: 0px;
-		text-align: center;
-	}
 
 	header{
 		display: flex;

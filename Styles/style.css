@@ -1,25 +1,95 @@
+/* --- Configurations --- */
+html {
+	scroll-behavior: smooth;
+}
+
 /* ----- Polices ----- */
 @font-face {
 	font-family: "Harlow Solid Italic";
 	src:
-		url("../Polices/HARLOWSI.TTF");
+		url("../polices/HARLOWSI.TTF");
 }
 
 @font-face {
 	font-family: "Ubuntu";
-	src: url("../Polices/UbuntuTitling-Bold.ttf");
+	src: url("../polices/UbuntuTitling-Bold.ttf");
 }
 
 body{
 	font-family: "Ubuntu", "Calibri";
 }
 
+/* ---------- Écran de démarrage ---------- */
+.demarrage{
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	visibility: collapse;
+
+	animation-duration: 3s;
+	animation-name: fond-demmarrage;
+}
+
+.demarrage h1{
+	font-family: "Harlow Solid Italic";
+	animation-duration: 3s;
+	animation-name: titre-demarrage;
+	margin-top: 24px;
+	margin-left: 15px;
+}
+
+@keyframes fond-demmarrage{
+	0%{
+		background-color: white;
+		visibility: visible;
+	}
+	90%{
+		background-color: white;
+	}
+	100%{
+		background-color: transparent;
+	}
+}
+
+@keyframes titre-demarrage {
+	0%{
+		margin-top: calc((100vh - 50px) / 2);
+		margin-left: calc((100vw - 170px) / 2);
+	}
+	50%{
+		margin-top: calc((100vh - 50px) / 2);
+		margin-left: calc((100vw - 170px) / 2);
+	}
+	70%{
+		margin-top: 24px;
+		margin-left: calc((100vw - 170px) / 2);
+	}
+	90%{
+		margin-top: 24px;
+		margin-left: 15px;
+	}
+}
+
 /* ----- Header ----- */
 header{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: calc(100% - 30px);
+	height: 80px;
+	margin: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+
+	background-color: rgb(250, 250, 250);
+	border-radius: 10px;
+	box-shadow: 10px 5px 5px rgba(100, 100, 100, 0.1);
 }
 header h1{
 	text-decoration: none;
@@ -60,18 +130,112 @@ header nav ul li a:focus{
 	background-color: rgba(150, 150, 150, 0.5);
 }
 
+/* ---------- Main ---------- */
+main{
+	margin-top: 128px;
+}
+
+/* Technologies */
+.listeTechnologies{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/* Langages */
+.langage{
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 10px;
+	padding: 30px;
+	width: 64px;
+	height: 70px;
+}
+
+.langage div{
+	min-width: 64px;
+	min-height: 64px;
+}
+
+.langage img{
+	max-width: 64px;
+  	max-height: 64px;
+}
+
 /* -------------- Affichage mobile --------------- */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
+	/* ---------- Écran de démarrage ---------- */
+	@keyframes titre-demarrage {
+		0%{
+			margin-top: calc((100vh - 50px) / 2);
+		}
+		70%{
+			margin-top: calc((100vh - 50px) / 2);
+		}
+		90%{
+			margin-top: 21px;
+		}
+	}
+
+	.demarrage h1{
+		padding: 5px;
+		margin-top: 21px;
+		margin-left: 0px;
+		text-align: center;
+	}
+
 	header{
 		display: flex;
 		flex-direction: column;
+	}
+
+	.header-ouvert{
+		animation-duration: 0.5s;
+		animation-name: ouvrir-header;
+		height: 360px;
+	}
+
+	.header-ferme{
+		animation-duration: 0.5s;
+		animation-name: fermer-header;
+		height: 80px;
+	}
+
+	@keyframes ouvrir-header {
+		from{
+			height: 80px;
+		}
+		to{
+			height: 360px;
+		}
+	}
+
+	@keyframes fermer-header {
+		from{
+			height: 360px;
+		}
+		to{
+			height: 80px;
+		}
+	}
+
+	@keyframes ouvrir-elt-nav {
+		from{
+			color: rgba(0, 0, 0, 0);
+		}
+
+		to{
+			color: rgba(0, 0, 0, 1);
+		}
 	}
 
 	/* Bouton de navigation */
 	header #bouton-menu-nav{
 		position: absolute;
 		left: 16px;
-		top: 24px;
+		top: 16px;
 		display: inline-block;
 		cursor: pointer;
 		background: transparent;

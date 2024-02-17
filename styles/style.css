@@ -220,13 +220,21 @@ main section{
 /* Compétences */
 .competence{
 	padding: 10px;
+	margin: 10px;
 	background-color: rgba(230, 230, 230, 0.5);
 	box-shadow: 10px 5px 5px rgba(200, 200, 200, 0.5);
 	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 /* Technologies */
-.listeTechnologies{
+#section-technologies .technologie{
+	margin: 10px;
+	padding: 10px;
+}
+#section-technologies .listeTechnologies{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -406,10 +414,22 @@ footer{
 @media screen and (max-width: 700px) {
 	/* ---------- Écran de démarrage ---------- */
 	
-
 	.demarrage h1{
 		font-size: 40px;
 	}
+
+	/* Présentation */
+
+	#section-presentation{
+		display: flex;
+		flex-direction: column;
+	}
+
+	#section-presentation .profil{
+	max-width: 300px;
+	width: 100%;
+	height: auto;
+}
 }
 
 /* -------------------- Mode sombre -------------------- */

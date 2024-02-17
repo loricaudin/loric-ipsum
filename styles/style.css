@@ -413,13 +413,11 @@ footer{
 /* -------------- Affichage mobile --------------- */
 @media screen and (max-width: 700px) {
 	/* ---------- Écran de démarrage ---------- */
-	
 	.demarrage h1{
 		font-size: 40px;
 	}
 
 	/* Présentation */
-
 	#section-presentation{
 		display: flex;
 		flex-direction: column;
@@ -429,7 +427,14 @@ footer{
 	max-width: 300px;
 	width: 100%;
 	height: auto;
-}
+	}
+
+	/* Compétences */
+	.competence{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 }
 
 /* -------------------- Mode sombre -------------------- */

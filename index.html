@@ -9,14 +9,14 @@
 	</head>
 	<body>
 		<header>
-			<button id="bouton-menu-nav" onclick="ouvrirMenuNav(this)">
+			<button id="bouton-menu-nav">
 				<div>
 					<div id="bar-nav-1"></div>
 					<div id="bar-nav-2"></div>
 					<div id="bar-nav-3"></div>
 				</div>
 			</button>
-			<h1><a href="">Loric Ipsum</a></h1>
+			<h1><a href="#">Loric Ipsum</a></h1>
 			<div class="demarrage">
 				<h1>Loric Ipsum</h1>
 			</div>
@@ -31,22 +31,26 @@
 				</ul>
 			</nav>
 		</header>
+		<div class="cache-dessous-header"></div>
 		<main>
 			<article>
-				<section id="presentation">
-					<h2>Qui suis-je ?</h2>
-					<p>
-						Je m’appelle Loric Audin et je suis passionné d’informatique depuis tout jeune.
-						J’ai 20 ans, et je suis actuellement en 2ème année de BUT Informatique.
-						Ce que j’aime tant dans l’informatique, c’est la programmation.
-						Depuis le collège, j’adorais faire des petits programmes.
-						J’ai commencé par faire du Scratch,
-						et ma grande curiosité m’a permis d’acquérir des nouveaux langages de programmation
-						et de découvrir davantage de fonctionnalités.
-						J’adore créer des sites web et des applications,
-						que ce soit sur PC ou mobile, peut importe la technologie utilisée.
-					</p>
-					<img src="profil.png"/>
+				<a id="presentation" class="lien"></a>
+				<section id="section-presentation">
+					<div>
+						<h2>Qui suis-je ?</h2>
+						<p>
+							Je m’appelle Loric Audin et je suis passionné d’informatique depuis tout jeune.
+							J’ai 20 ans, et je suis actuellement en 2ème année de BUT Informatique.
+							Ce que j’aime tant dans l’informatique, c’est la programmation.
+							Depuis le collège, j’adorais faire des petits programmes.
+							J’ai commencé par faire du Scratch,
+							et ma grande curiosité m’a permis d’acquérir des nouveaux langages de programmation
+							et de découvrir davantage de fonctionnalités.
+							J’adore créer des sites web et des applications,
+							que ce soit sur PC ou mobile, peut importe la technologie utilisée.
+						</p>
+					</div>
+					<img src="images/profil.jpg" class="profil"/>
 				</section>
 				<!--
 				<section id="parcours">
@@ -57,12 +61,34 @@
 					<img src="profil.png"/>
 				</section>
 				-->
-				<section id="competences">
+				<a id="competences" class="lien"></a>
+				<section id="section-competences">
 					<h2>Mes compétences</h2>
 					<div>
-						<div>
-							<h3></h3>
-							<p></p>
+						<div class="competence">
+							<h3>Réaliser un développement</h3>
+							<p>Il s'agit de concevoir, coder, tester et intégrer une solution informatique pour un client en respectant les besoins décrits par le client, en appliquant les principes algorithmiques et en veillant à la qualité du code et à la documentation.</p>
+						</div>
+						<img src=""/>
+					</div>
+					<div>
+						<div class="competence">
+							<h3>Optimiser des applications</h3>
+							<p>Il s'agit de proposer des applications informatiques optimisées en fonction du temps d’exécution, de la précision et de la consommation de ressources, d'améliorer les performances des programmes et de limiter son impact environnemental. Les situations complexes sont formalisées et modélisées avec des schémas de raisonnement.</p>
+						</div>
+						<img src=""/>
+					</div>
+					<div>
+						<div class="competence">
+							<h3>Administrer des systèmes</h3>
+							<p>Il s'agit d'installer, de configurer, de mettre à disposition, de maintenir en conditions opérationnelles des infrastructures, des services et des réseaux et d'optimiser le système informatique d’une organisation, tout en sécurisant le système d’information et en offrant une qualité de service optimale afin d'assurer la continuité d'activité.</p>
+						</div>
+						<img src=""/>
+					</div>
+					<div>
+						<div class="competence">
+							<h3>Gérer des données</h3>
+							<p>Il s'agit de concevoir, gérer, administrer et exploiter les données de l’entreprise et mettre à disposition toutes les informations pour un bon pilotage de l’entreprise, en assurant la cohérence et la qualité, en respectant la vie privée et en protégeant les données personnelles.</p>
 						</div>
 						<img src=""/>
 					</div>
@@ -76,7 +102,8 @@
 					</div>
 					-->
 				</section>
-				<section id="technologies">
+				<a id="technologies" class="lien"></a>
+				<section id="section-technologies">
 					<h2>Les technologies utilisées</h2>
 					<div>
 						<h3>Les langages</h3>
@@ -101,8 +128,9 @@
 					</div>
 				</section>
 				<!--
-				<section id="realisations">
-					<h2>Mon parcours</h2>
+				<a id="realisations" class="lien"></a>
+				<section id="section-realisations">
+					<h2>Mes réalisations</h2>
 					<p>
 						
 					</p>
@@ -110,7 +138,8 @@
 				</section>
 				-->
 				<!--
-				<section id="contact">
+				<a id="contact" class="lien"></a>
+				<section id="section-contact">
 					<h2>Mon parcours</h2>
 					<p>
 						
@@ -119,6 +148,7 @@
 				</section>
 				-->
 			</article>
+			<!-- <a href="#" class="remonter"><img src="images/top.png"/></a> -->
 		</main>
 		<footer>
 			<p>©2024 Loric Audin - Tous droits réservés</p>

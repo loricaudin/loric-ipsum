@@ -80,9 +80,10 @@
 	box-shadow: 10px 5px 5px rgba(70, 70, 70, 0.5);
 }
 
+/*
 .modeSombre .cache-dessous-header{
 	background-color: rgb(30, 30, 30);
-}
+} /* Retrait de la marge du header en haut */
 
 .modeSombre header h1 a{
 	color: white;

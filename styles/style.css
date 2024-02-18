@@ -124,6 +124,7 @@ header{
 	width: calc(100% - 30px);
 	height: 80px;
 	margin: 5px;
+	margin-top: 0px; /* Retrait de la marge du header en haut */
 	padding-left: 10px;
 	padding-right: 10px;
 	display: flex;
@@ -142,6 +143,7 @@ header h1{
 	cursor: pointer;
 }
 
+/*
 .cache-dessous-header{
 	position: fixed;
 	left: 0px;
@@ -152,7 +154,7 @@ header h1{
 	margin-right: 5px;
 	height: 80px;
 	background-color: rgb(255, 255, 255);
-}
+} /* Retrait de la marge du header en haut */
 
 header #bouton-menu-nav{
 	display: none;

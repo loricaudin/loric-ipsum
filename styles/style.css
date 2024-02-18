@@ -263,6 +263,22 @@ main section{
   	max-height: 64px;
 }
 
+/* Contact */
+#section-contact{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#section-contact .cv img{
+	width: 30vw;
+	max-width: 300px;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 10px 10px 10px rgba(200, 200, 200, 0.5);
+}
+
+
 /* ----- Footer ----- */
 footer{
 	display: flex;
@@ -435,6 +451,23 @@ footer{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+	}
+
+	/* Contact */
+	#section-contact{
+		display: flex;
+		flex-direction: column;
+	}
+
+	#section-contact .cv{
+		width: 100%;
+	}
+
+	#section-contact .cv img{
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px rgba(200, 200, 200, 0.5);
 	}
 }
 

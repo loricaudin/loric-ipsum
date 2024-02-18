@@ -1,7 +1,12 @@
-/* --- Configurations --- */
+/* ----- Configurations du site ----- */
 html {
 	scroll-behavior: smooth;
 	overflow-y: scroll;
+}
+
+body{
+	font-family: "Ubuntu", "Calibri";
+	margin: 0;
 }
 
 /*
@@ -31,7 +36,7 @@ html {
 	top: -100px;
 }
 
-/* ----- Polices ----- */
+/* ---------- Polices ---------- */
 @font-face {
 	font-family: "Harlow Solid Italic";
 	src:
@@ -41,11 +46,6 @@ html {
 @font-face {
 	font-family: "Ubuntu";
 	src: url("../polices/UbuntuTitling-Bold.ttf");
-}
-
-body{
-	font-family: "Ubuntu", "Calibri";
-	margin: 0;
 }
 
 /* ---------- Écran de démarrage ---------- */
@@ -114,7 +114,7 @@ body{
 	}
 }
 
-/* ----- Header ----- */
+/* ---------- Header ---------- */
 header{
 	/* Pour fixer le header */
 	position: fixed;
@@ -205,7 +205,14 @@ main section{
 	border-radius: 10px;
 }
 
-/* Présentation */
+/* --- Accueil --- */
+.accueil{
+	background-color: transparent;
+	box-shadow: none;
+	height: calc(100vh - 90px);
+}
+
+/* --- Présentation --- */
 #section-presentation{
 	display: flex;
 	flex-direction: row;
@@ -218,11 +225,13 @@ main section{
 	box-shadow: 10px 10px 10px rgba(200, 200, 200, 0.5);
 }
 
-/* Compétences */
+/* --- Parcours --- */
+
+/* --- Compétences --- */
 .competence{
 	padding: 10px;
 	margin: 10px;
-	background-color: rgba(230, 230, 230, 0.5);
+	background-color: rgba(230, 230, 230, 0.3);
 	box-shadow: 10px 5px 5px rgba(200, 200, 200, 0.5);
 	border-radius: 10px;
 	display: flex;
@@ -230,7 +239,7 @@ main section{
 	justify-content: space-between;
 }
 
-/* Technologies */
+/* --- Technologies --- */
 #section-technologies .technologie{
 	margin: 10px;
 	padding: 10px;
@@ -263,7 +272,9 @@ main section{
   	max-height: 64px;
 }
 
-/* Contact */
+/* --- Réalisations --- */
+
+/* --- Contact --- */
 #section-contact{
 	display: flex;
 	flex-direction: row;
@@ -279,7 +290,7 @@ main section{
 }
 
 
-/* ----- Footer ----- */
+/* ---------- Footer ---------- */
 footer{
 	display: flex;
 	flex-direction: row;
@@ -345,7 +356,7 @@ footer{
 		}
 	}
 
-	/* Bouton de navigation */
+	/* --- Bouton de navigation --- */
 	header #bouton-menu-nav{
 		position: absolute;
 		left: 16px;
@@ -369,6 +380,10 @@ footer{
 
 	header #bouton-menu-nav:hover{
 		background-color: rgba(200, 200, 200, 0.5);
+	}
+
+	header #bouton-menu-nav:focus{
+		background-color: rgba(150, 150, 150, 0.5);
 	}
 
 	header #bar-nav-1, header #bar-nav-2, header #bar-nav-3{
@@ -446,14 +461,14 @@ footer{
 	height: auto;
 	}
 
-	/* Compétences */
+	/* ----- Compétences ----- */
 	.competence{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 	}
 
-	/* Contact */
+	/* ----- Contact ----- */
 	#section-contact{
 		display: flex;
 		flex-direction: column;
@@ -467,11 +482,5 @@ footer{
 		width: 100%;
 		height: auto;
 		border-radius: 10px;
-		box-shadow: 10px 10px 10px rgba(200, 200, 200, 0.5);
 	}
-}
-
-/* -------------------- Mode sombre -------------------- */
-.modeSombre {
-	background-color: rgb(10, 10, 10);
 }

@@ -545,6 +545,10 @@ footer{
 	color: white;
 }
 
+.modeSombre a{
+	color: rgb(120, 180, 248);
+}
+
 /*
 .remonter{
 	position: fixed;

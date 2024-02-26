@@ -81,6 +81,7 @@ function activerAnimationDemarrage(){
         titreDemarrage.style.animationName = "titre-demarrage";
     }
     mainDemarrage.style.animationName = "main-demarrage";
+    demarrage.style.visibility = "collapse";
 }
 
 function desactiverAnimationDemarrage(){

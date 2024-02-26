@@ -72,6 +72,8 @@ function activerAnimationDemarrage(){
     let titreDemarrage = document.querySelector(".demarrage h1");
     let mainDemarrage = document.querySelector("main");
     
+    body.style.display = "block";
+
     if(body.classList.contains("modeSombre")){
         demarrage.style.animationName = "fond-demmarrage-sombre";
         titreDemarrage.style.animationName = "titre-demarrage-sombre";

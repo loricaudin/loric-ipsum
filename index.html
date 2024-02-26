@@ -6,9 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="icon" href="images/icone.png"/>
 		<link rel="stylesheet" href ="styles/style.css"/>
-		<link rel="stylesheet" href ="styles/styleSombre.css"/>
 	</head>
-	<body class="modeColore">
+	<body>
 		<header>
 			<button id="bouton-menu-nav">
 				<div>
@@ -35,8 +34,24 @@
 		<!-- <div class="cache-dessous-header"></div> <!-- Retrait de la marge du header en haut -->
 		<main>
 			<article>
-				<section class="accueil" style="display: none;">
-					Bienvenue !
+				<section class="accueil" style="display: flex;">
+					<h1>Bienvenue dans mon portfolio !</h1>
+					<div class="mode-affichage">
+						<h2>Comment voulez-vous visiter le portfolio ?</h2>
+						<label>
+							Mode d'affichage : 
+							<select class="choix-mode-affichage" placeholder="Choisissez le mode d'affichage">
+								<optgroup label="Sélectionnez le mode d'affichage du site">
+									<option selected="selected" value="clair-simple">Clair</option>
+									<option value="sombre-simple">Sombre</option>
+									<option value="clair-colore">Clair coloré</option>
+									<option value="sombre-colore">Sombre coloré</option>
+									<!-- <option value="perso">Personnaliser</option> -->
+								</optgroup>
+							</select>
+						</label>
+					</div>
+					<a class="commencer" href="#presentation"><img src="images/flecheCommencer.png"/></a>
 				</section>
 				<a id="presentation" class="lien"></a>
 				<section id="section-presentation">
@@ -148,7 +163,7 @@
 							<li>Compte LinkedIn : <a href="https://www.linkedin.com/in/loric-audin-1a1b29250/">https://www.linkedin.com/in/loric-audin-1a1b29250/</a></li>
 							<li>Numéro de téléphone : <a href="tel:+33644764441">06.44.76.44.41</a></li>
 						</ul>
-						<p>Vous pouvez également télécharger mon CV en cliqant dessus ou en cliquant <a href="documents/CV Loric Audin.pdf">ici.</a></p>
+						<p>Vous pouvez également télécharger mon CV en cliquant dessus ou en cliquant <a href="documents/CV Loric Audin.pdf">ici.</a></p>
 					</div>
 					<div><a class="cv" href="documents/CV Loric Audin.pdf" title="Télécharger le CV"><img src="images/cv.png"/></a></div>
 				</section>

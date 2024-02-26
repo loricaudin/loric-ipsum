@@ -1,3 +1,4 @@
+/* ---------- Bouton de navigation ----------- */
 var boutonNav = document.getElementById("bouton-menu-nav");
 boutonNav.addEventListener("click", ouvrirFermerMenuNav);
 
@@ -23,3 +24,70 @@ body.addEventListener("click", function(e){
         setTimeout('ouvrirFermerMenuNav()', 1000);
     }
 })
+
+/* ---------- Mode d'affichage ---------- */
+function miseAJourModeAffichage(e){
+    let body = document.querySelector("body");
+    let valeur;
+    if(e != null){
+        valeur = e.target.value;
+        if(valeur == "clair-simple"){
+            localStorage.removeItem("li_theme");
+        }
+        else{
+            localStorage.setItem("li_theme", valeur);
+        }
+    }
+    else{
+        valeur = localStorage.getItem("li_theme");
+    }
+    if(valeur == "sombre-simple" || valeur == "sombre-colore"){
+        body.classList.add("modeSombre");
+    }
+    else{
+        body.classList.remove("modeSombre");
+    }
+    if(valeur == "clair-colore" || valeur == "sombre-colore"){
+        body.classList.add("modeColore");
+    }
+    else{
+        body.classList.remove("modeColore");
+    }
+}
+
+let choixModeAffichage = document.querySelector(".choix-mode-affichage");
+choixModeAffichage.addEventListener("change", miseAJourModeAffichage);
+
+miseAJourModeAffichage(null);
+
+/* ---------- Animation de démarrage ---------- */
+function activerAnimationDemarrage(){
+    let body = document.querySelector("body");
+
+    let demarrage = document.querySelector(".demarrage");
+    let titreDemarrage = document.querySelector(".demarrage h1");
+    let mainDemarrage = document.querySelector("main");
+    
+    if(body.classList.contains("modeSombre")){
+        demarrage.style.animationName = "fond-demmarrage-sombre";
+        titreDemarrage.style.animationName = "titre-demarrage-sombre";
+    }
+    else{
+        demarrage.style.animationName = "fond-demmarrage";
+        titreDemarrage.style.animationName = "titre-demarrage";
+    }
+    mainDemarrage.style.animationName = "main-demarrage";
+}
+
+function desactiverAnimationDemarrage(){
+    let demarrage = document.querySelector(".demarrage");
+    demarrage.style.animationName = "none";
+
+    let titreDemarrage = document.querySelector(".demarrage h1");
+    titreDemarrage.style.animationName = "none";
+
+    let mainDemarrage = document.querySelector("main");
+    mainDemarrage.style.animationName = "none";
+}
+activerAnimationDemarrage()
+setTimeout('desactiverAnimationDemarrage()', 5000);

@@ -94,5 +94,9 @@ function desactiverAnimationDemarrage(){
     let mainDemarrage = document.querySelector("main");
     mainDemarrage.style.animationName = "none";
 }
-activerAnimationDemarrage()
-setTimeout('desactiverAnimationDemarrage()', 5000);
+
+window.addEventListener("load", function(){ // À la fin du chargement de la page, on fait l'animation
+    activerAnimationDemarrage();
+    setTimeout('desactiverAnimationDemarrage()', 5000);
+});
+

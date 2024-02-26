@@ -40,6 +40,10 @@ function miseAJourModeAffichage(e){
     }
     else{
         valeur = localStorage.getItem("li_theme");
+        if(valeur != null){
+            let choixModeAffichage = document.querySelector(".choix-mode-affichage");
+            choixModeAffichage.value = valeur;
+        }
     }
     if(valeur == "sombre-simple" || valeur == "sombre-colore"){
         body.classList.add("modeSombre");

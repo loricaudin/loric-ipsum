@@ -102,3 +102,111 @@ window.addEventListener("load", function(){ // À la fin du chargement de la pag
     setTimeout('desactiverAnimationDemarrage()', 5000);
 });
 
+/* ----- Réalisations ----- */
+var indexDiaporamas = [];
+for(let i = 0; i < document.querySelectorAll(".diaporamaRealisations").length; i++){
+    indexDiaporamas.push(0);
+}
+
+var imageEnCoursDeChangement = false;
+
+function deplacerImageDiaporama(index, n) {
+    if(!imageEnCoursDeChangement){
+        imageEnCoursDeChangement = true;
+        let positionPrecedente = indexDiaporamas[index];
+        indexDiaporamas[index] += n;
+        afficherImageDiaporama(index, positionPrecedente);
+    }
+}
+
+function changerImageDiaporama(index, n) {
+    if(!imageEnCoursDeChangement){
+        imageEnCoursDeChangement = true;
+        let positionPrecedente = indexDiaporamas[index];
+        indexDiaporamas[index] = n;
+        afficherImageDiaporama(index, positionPrecedente);
+    }
+}
+
+function afficherImageDiaporama(index, positionPrecedente) {
+    let diaporama = document.querySelectorAll(".diaporamaRealisations")[index].querySelector(".imageRealisation");
+    let pointsDiaporama = document.querySelectorAll(".diaporamaListePoints")[index].querySelectorAll(".lienImageRealisation");
+    let nbImages = diaporama.querySelectorAll("img").length;
+
+    if(indexDiaporamas[index] >= nbImages){
+        indexDiaporamas[index] = 0;
+    }
+    
+    if(indexDiaporamas[index] < 0){
+        indexDiaporamas[index] = nbImages - 1;
+    }
+
+    for(let i = 0; i < pointsDiaporama.length; i++){
+        pointsDiaporama[i].classList.remove('imageRealisationActive');
+    }
+    
+    // Afficher la slide demandée
+    //diaporama.style.transform = "translateX(" + (-indexDiaporamas[index] * 30) + "vw)"; // Manière brute
+
+    // Animez la translation en utilisant setInterval
+    let positionActuelle = positionPrecedente;
+    let n = 5;
+
+    const animation = setInterval(() => {
+        if ((positionPrecedente < indexDiaporamas[index] && positionActuelle >= indexDiaporamas[index] - 0.01) || (positionPrecedente >= indexDiaporamas[index] && positionActuelle <= indexDiaporamas[index] + 0.01)) {
+            imageEnCoursDeChangement = false;
+            clearInterval(animation); // Arrêtez l'animation lorsque la distance est atteinte
+        } else {
+            positionActuelle += (indexDiaporamas[index] - positionPrecedente) / n;
+            n += n / 4;
+            if ((positionPrecedente < indexDiaporamas[index] && positionActuelle >= indexDiaporamas[index] - 0.01) || (positionPrecedente >= indexDiaporamas[index] && positionActuelle <= indexDiaporamas[index] + 0.01)) {
+                positionActuelle = indexDiaporamas[index];
+            }
+            diaporama.style.transform = "translateX(" + (-positionActuelle * 30) + "vw)";
+        }
+    }, 10);
+
+
+
+    pointsDiaporama[indexDiaporamas[index]].classList.add('imageRealisationActive');
+}
+
+function initialiserDiaporama(index){
+    let diaporamaImg = document.querySelectorAll(".diaporamaRealisations")[index].querySelectorAll("img");
+    if(diaporamaImg.length > 1){
+        let emplacementPointsDiaporama = document.querySelectorAll(".diaporamaListePoints")[index];
+        
+        let diaporamaRealisations = document.querySelectorAll(".diaporamaRealisations")[index];
+        
+        let flecheGauche = document.createElement("a");
+        let flecheDroite = document.createElement("a");
+        flecheGauche.innerHTML = "&#10094;";
+        flecheDroite.innerHTML = "&#10095;";
+        flecheGauche.classList.add("imageRealisationPrecedente");
+        flecheDroite.classList.add("imageRealisationSuivante");
+        flecheGauche.addEventListener("click", function(){
+            deplacerImageDiaporama(index, -1);
+        })
+        flecheDroite.addEventListener("click", function(){
+            deplacerImageDiaporama(index, 1);
+        })
+        diaporamaRealisations.appendChild(flecheGauche);
+        diaporamaRealisations.appendChild(flecheDroite);
+
+        for(let i = 0; i < diaporamaImg.length; i++){
+            let pointDiaporama = document.createElement("span");
+            pointDiaporama.classList.add("lienImageRealisation");
+            pointDiaporama.addEventListener("click", function(){
+                changerImageDiaporama(index, i);
+            })
+            emplacementPointsDiaporama.appendChild(pointDiaporama);
+        }
+
+        let pointsDiaporama = document.querySelectorAll(".diaporamaListePoints")[index].querySelectorAll(".lienImageRealisation");
+        pointsDiaporama[indexDiaporamas[index]].classList.add('imageRealisationActive');
+    }
+}
+
+for(let i = 0; i < indexDiaporamas.length; i++){
+    initialiserDiaporama(i);
+}

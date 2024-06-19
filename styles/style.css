@@ -598,6 +598,26 @@ footer{
 		justify-content: space-between;
 	}
 
+	/* --- Réalisations --- */
+	.realisation{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.diaporamaRealisations {
+		width: 70vw;
+		margin: auto;
+		position: relative;
+		overflow: hidden;
+		transition: all 1s;
+	}
+
+	.imageRealisation img{
+		width: 70vw !important;
+		height: 100%;
+	}
+
 	/* ----- Contact ----- */
 	#section-contact{
 		display: flex;

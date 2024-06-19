@@ -162,7 +162,12 @@ function afficherImageDiaporama(index, positionPrecedente) {
             if ((positionPrecedente < indexDiaporamas[index] && positionActuelle >= indexDiaporamas[index] - 0.01) || (positionPrecedente >= indexDiaporamas[index] && positionActuelle <= indexDiaporamas[index] + 0.01)) {
                 positionActuelle = indexDiaporamas[index];
             }
-            diaporama.style.transform = "translateX(" + (-positionActuelle * 30) + "vw)";
+            if (document.querySelector("html").clientWidth >= 700) {
+                diaporama.style.transform = "translateX(" + (-positionActuelle * 30) + "vw)";
+            } else {
+                diaporama.style.transform = "translateX(" + (-positionActuelle * 70) + "vw)";
+            }
+            
         }
     }, 10);
 

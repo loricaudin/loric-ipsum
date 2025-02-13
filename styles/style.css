@@ -62,6 +62,18 @@ button:focus{
 		url("../polices/HARLOWSI.TTF");
 }
 
+/* @font-face {
+	font-family: "Poppins SemiBold";
+	src:
+		url("../polices/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+	font-family: "Poppins";
+	src:
+		url("../polices/Poppins-SemiBold.ttf");
+} */
+
 @font-face {
 	font-family: "Ubuntu";
 	src: url("../polices/UbuntuTitling-Bold.ttf");
@@ -179,9 +191,17 @@ header #bouton-menu-nav{
 	display: none;
 }
 
+header h1 img{
+	height: 50px;
+}
+
 header h1 a{
 	text-decoration: none;
 	color: black;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
 }
 
 header nav ul{

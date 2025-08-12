@@ -1,0 +1,101 @@
+.projets {
+    
+    & > div {
+        .liste-projets {
+            .projet {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 10px;
+
+                h1 {
+                    font-size: 20px;
+                }
+        
+                h2 {
+                    font-size: 16px;
+                }
+            
+                .diaporamaRealisations {
+                    width: 30vw;
+                    margin: auto;
+                    position: relative;
+                    overflow: hidden;
+                    transition: all 1s;
+                }
+                
+                .imageRealisation {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+                .imageRealisation img{
+                    width: 30vw !important;
+                    height: 100%;
+                }
+            
+                .imageRealisationPrecedente, .imageRealisationSuivante {
+                    cursor: pointer;
+                    color: white;
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    padding: 16px;
+                    border-radius: 0 3px 3px 0;
+                    background: rgba(0, 0, 0, .5);
+                    transition: all .3s;
+                }
+            
+                .imageRealisationSuivante {
+                    right: 0;
+                    border-radius: 3px 0 0 3px;
+                }
+                
+                .imageRealisationPrecedente:hover, .imageRealisationSuivante:hover {
+                    background: rgba(0, 0, 0, .8);
+                }
+            
+                .lienImageRealisation {
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    margin: 10px 2px 0 2px;
+                    display: inline-block;
+                    background: #ddd;
+                    transition: all .3s;
+                }
+                
+                .imageRealisationActive, .lienImageRealisation:hover {
+                    background: #717171;
+                }
+            
+                .diaporamaListePoints{
+                    text-align: center;
+                }
+            }
+            
+            /* Affichage mobile */
+            @media screen and (max-width: 1000px) {
+                .realisation{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            
+                .diaporamaRealisations {
+                    width: 70vw;
+                    margin: auto;
+                    position: relative;
+                    overflow: hidden;
+                    transition: all 1s;
+                }
+            
+                .imageRealisation img{
+                    width: 70vw !important;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

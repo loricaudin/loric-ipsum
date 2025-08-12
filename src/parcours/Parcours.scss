@@ -1,0 +1,87 @@
+.parcours {
+
+    & > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1000px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .parcours-chronologique {
+            position: relative;
+    
+            /* Pour dessiner le trait bleu */
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 10px;
+                width: 10px;
+                margin-top: 100px;
+                height: calc(100% - 100px);
+                background-color: var(--couleur-principale);
+                border-radius: 10px;
+                z-index: -1;
+            }
+    
+            .elt-parcours {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+    
+                margin-top: 50px;
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    margin-top: 10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: var(--couleur-principale);
+                    border: 5px solid white;
+                    border-radius: 20px;
+                    z-index: -1;
+                }
+    
+                &.en-cours::before {
+                    content: '';
+                    position: absolute;
+                    margin-top: 10px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: white;
+                    border: 5px solid var(--couleur-principale);
+                    border-radius: 20px;
+                    z-index: -1;
+                }
+    
+                h1 {
+                    font-size: 20px;
+                }
+        
+                h2 {
+                    font-size: 16px;
+                }
+    
+                div {
+                    margin-left: 50px;
+                }
+    
+                img {
+                    max-width: 500px;
+                    width: 70%;
+                }
+    
+                @media screen and (max-width: 500px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}

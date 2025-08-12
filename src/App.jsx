@@ -1,33 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Accueil from './accueil/Accueil'
+import Presentation from './presentation/Presentation'
+import Parcours from './parcours/Parcours'
+import Competences from './competences/Competences'
+import Technologies from './technologies/Technologies'
+import Projets from './projets/Projets'
+import Contact from './contact/Contact'
+import Carre from './decors/Carre'
+// import Header from "./Header"
+// import Footer from "./Footer"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* <Carre taille="300px" x="10px" y="10px"/>
+      <Carre taille="70px" x="500px" y="10px" couleur="white"/> */}
+      <Accueil/> {/* TODO : Style */}
+      <Presentation/> {/* TODO */}
+      <Parcours/>
+      <Competences/> {/* TODO */}
+      <Technologies/> {/* TODO */}
+      <Projets/> {/* TODO */}
+      <Contact/> {/* TODO */}
     </>
   )
 }

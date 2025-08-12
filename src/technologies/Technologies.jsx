@@ -1,0 +1,111 @@
+import Technologie from "./Technologie";
+
+export default function Technologies() {
+    return <>
+        <h2>Mes technologies</h2>
+        <Technologie
+            nom="Python"
+            type="application"
+        />
+        <Technologie
+            nom="HTML"
+            type="web"
+        />
+        <Technologie
+            nom="CSS"
+            type="web"
+        />
+        <Technologie
+            nom="JavaScript"
+            type="Web"
+        />
+        <Technologie
+            nom="TypeScript"
+            type="Web"
+        />
+        <Technologie
+            nom="Microsoft Visual Basic"
+            type="application"
+        />
+        <Technologie
+            nom="C"
+            type="application"
+        />
+        <Technologie
+            nom="C++"
+            type="application"
+        />
+        <Technologie
+            nom="C#"
+            type="application"
+        />
+        <Technologie
+            nom="Java"
+            type="application"
+        />
+        <Technologie
+            nom="Android Java et Kotlin"
+            type="mobile"
+        />
+        <Technologie
+            nom="PHP"
+            type="web"
+        />
+        <Technologie
+            nom="MySQL"
+            type="baseDeDonnees"
+        />
+        <Technologie
+            nom="Oracle Database"
+            type="baseDeDonnees"
+        />
+        <Technologie
+            nom="Microsoft SQL Server"
+            type="baseDeDonnees"
+        />
+        <Technologie
+            nom="MongoDB"
+            type="baseDeDonnees"
+        />
+        <Technologie
+            nom="React"
+            type="web-front"
+        />
+        <Technologie
+            nom="Vue"
+            type="web-front"
+        />
+        <Technologie
+            nom="Angular"
+            type="web-front"
+        />
+        <Technologie
+            nom="Spring/Spring Boot"
+            type="web-back"
+        />
+        <Technologie
+            nom="Django"
+            type="web-back"
+        />
+        <Technologie
+            nom="FastApi"
+            type="web-back"
+        />
+        <Technologie
+            nom="Express"
+            type="web-back"
+        />
+        <Technologie
+            nom="Node"
+            type="web"
+        />
+        <Technologie
+            nom="Nest"
+            type="web-back"
+        />
+        <Technologie
+            nom="Next"
+            type="web-front"
+        />
+    </>
+}

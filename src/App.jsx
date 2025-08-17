@@ -17,7 +17,7 @@ function App() {
       {/* <Carre taille="300px" x="10px" y="10px"/>
       <Carre taille="70px" x="500px" y="10px" couleur="white"/> */}
       <Accueil/> {/* TODO : Style */}
-      <Presentation/> {/* TODO */}
+      <Presentation/>
       <Parcours/>
       <Competences/> {/* TODO */}
       <Technologies/> {/* TODO */}

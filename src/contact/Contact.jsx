@@ -10,6 +10,6 @@ export default function Contact() {
             </ul>
             <p>Vous pouvez également télécharger mon CV en cliquant dessus ou en cliquant <a href="assets/documents/CV Loric Audin.pdf">ici.</a></p>
         </div>
-        <div><a class="cv" href="documents/CV Loric Audin.pdf" title="Télécharger le CV"><img src="images/cv.png"/></a></div>
+        <div><a className="cv" href="documents/CV Loric Audin.pdf" title="Télécharger le CV"><img src="images/cv.png"/></a></div>
     </>
 }

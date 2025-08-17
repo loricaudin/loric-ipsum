@@ -13,7 +13,7 @@ function calculerAge(dateAnniversaire) {
 
 export default function Presentation() {
     const age = calculerAge(new Date('2004-05-27'));
-    return <div className="presentation">
+    return <div id="presentation">
         <h2>Qui suis-je ?</h2>
         <div>
             <p>

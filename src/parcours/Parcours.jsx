@@ -2,7 +2,7 @@ import ElementParcours from './ElementParcours'
 import './Parcours.scss'
 
 export default function Parcours() {
-    return <div className="parcours">
+    return <div id="parcours">
         <h1>Mon parcours</h1>
         <div>
             <div className="parcours-chronologique">

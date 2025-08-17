@@ -74,6 +74,7 @@ header {
             display: none;
             padding-top: 0px;
             padding-bottom: 0px;
+            padding-right: 0px;
             width: 100%;
 
             .nav-ouvert {
@@ -200,6 +201,8 @@ header {
     } /* Retrait de la marge du header en haut */
 
     nav {
+        padding-right: 10px;
+
         ul {
             list-style: none;
             padding: 0;

@@ -1,7 +1,7 @@
 export default function Contact() {
     return <section id="contact">
         <div>
-            <h2>Vous voulez me contactez ?</h2>
+            <h1>Vous voulez me contactez ?</h1>
             <p>Toutes mes infos se trouvent ici :</p>
             <ul>
                 <li>Adresse mail : <a href="mailto:loricaudin@yahoo.fr">loricaudin@yahoo.fr</a></li>

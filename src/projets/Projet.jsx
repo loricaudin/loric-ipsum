@@ -83,7 +83,7 @@ export default function Projet({ nomProjet, icone, anneeCreation, type, descript
                     <div className="diaporamaRealisations">
                         <div className="imageRealisation" ref={diaporamaRef}>
                             {listeImages.map((image, index) => (
-                                <div className="image" key={index}><img src={`src/assets/images/projets/${image}.png`}/></div>
+                                <div className="image" key={index}><img src={"/images/projets/" + image + ".png"}/></div>
                             ))}
                         </div>
                         <a className="imageRealisationPrecedente" onClick={() => deplacerImageDiaporama(-1)}>❮</a>

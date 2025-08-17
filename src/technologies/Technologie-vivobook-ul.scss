@@ -1,0 +1,37 @@
+.technologies {
+    
+}
+
+/* TODO */
+/* --- Technologies --- */
+#section-technologies .technologie{
+	margin: 10px;
+	padding: 10px;
+}
+#section-technologies .listeTechnologies{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/* Langages */
+.langage{
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 10px;
+	padding: 30px;
+	width: 64px;
+	height: 70px;
+}
+
+.langage div{
+	min-width: 64px;
+	min-height: 64px;
+}
+
+.langage img{
+	max-width: 64px;
+  	max-height: 64px;
+}

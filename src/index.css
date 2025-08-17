@@ -12,7 +12,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
+html {
   font-family: Poppins, Calibri, Arial, sans-serif;
 
 	scroll-behavior: smooth;

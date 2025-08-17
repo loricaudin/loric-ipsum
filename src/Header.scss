@@ -6,10 +6,9 @@ header {
 	z-index: 1;
 	height: 80px;
 	margin-top: 0px; /* Retrait de la marge du header en haut */
-    width: 100vh;
     padding-left: 10px;
 	padding-right: 10px;
-    width: calc(100% - 20px);
+    width: calc(100vw - 20px);
 	/*
     margin: 5px;
     width: calc(100% - 30px);

@@ -12,12 +12,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
+html, body {
   font-family: Poppins, Calibri, Arial, sans-serif;
 
 	scroll-behavior: smooth;
 	overflow-y: scroll;
   overflow-x: hidden;
+
+  width: 100vw;
+  position: relative;
 
   --couleur-principale: #503AC0;
   --couleur-secondaire: #322377;

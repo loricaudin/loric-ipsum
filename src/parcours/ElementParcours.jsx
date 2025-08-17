@@ -9,7 +9,7 @@ export default function ElementParcours({titre, sousTitre, dateDebut, dateFin, d
             <p>{emplacement}</p>
         </div>
         <div>
-            <img src={"/public/images/parcours/" + imageSrc + "-clair.png"}/>
+            <img src={"/images/parcours/" + imageSrc + "-clair.png"}/>
         </div>
     </div>
 }

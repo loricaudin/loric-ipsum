@@ -34,7 +34,7 @@ export default function Header() {
                 <div id="bar-nav-3"></div>
             </div>
         </button>
-        <h1><a href="#"><img src="/public/images/icone.png"/> Loric Ipsum</a></h1>
+        <h1><a href="#"><img src="/images/icone.png"/> Loric Ipsum</a></h1>
         <nav>
             <ul>
                 <li><a href="#presentation">Présentation</a></li>

@@ -28,7 +28,7 @@ export default function Presentation() {
                     J’adore créer des sites web et des applications,
                     que ce soit sur PC ou mobile, peut importe la technologie utilisée.
                 </p>
-                <img className="profil" src="/src/assets/images/moi.jpg"/>
+                <img className="profil" src="/public/images/moi.jpg"/>
             </div>
         </section>
     </>

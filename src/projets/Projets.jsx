@@ -177,7 +177,7 @@ export default function Projets() {
                         Secret-R est une application console réalisée en langage C en binôme dans le cadre de ma formation.
                         L'objectif était de créer un annuaire et de pouvoir gérer des contacts sauvegardées dans un fichier CSV.
                     `}
-                    lienTelechargement={"/src/assets/projets/Secret-R.exe"}
+                    lienTelechargement={"/public/projets/Secret-R.exe"}
                     lienSite={""}
                     lienCodeSource={"https://github.com/loricaudin-projets-academiques/Secret-R"}
                     listeImages={["iut-secret-r-01", "iut-secret-r-02", "iut-secret-r-03"]}

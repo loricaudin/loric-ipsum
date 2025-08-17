@@ -1,4 +1,4 @@
-#parcours {
+.parcours {
 
     & > div {
         display: flex;
@@ -25,7 +25,6 @@
                 height: calc(100% - 100px);
                 background-color: var(--couleur-principale);
                 border-radius: 10px;
-                z-index: -1;
             }
     
             .elt-parcours {
@@ -44,7 +43,6 @@
                     background-color: var(--couleur-principale);
                     border: 5px solid white;
                     border-radius: 20px;
-                    z-index: -1;
                 }
     
                 &.en-cours::before {
@@ -56,7 +54,6 @@
                     background-color: white;
                     border: 5px solid var(--couleur-principale);
                     border-radius: 20px;
-                    z-index: -1;
                 }
     
                 h1 {

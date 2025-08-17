@@ -1,5 +1,4 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +10,40 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: Poppins, Calibri, Arial, sans-serif;
+
+	scroll-behavior: smooth;
+	overflow-y: scroll;
+  overflow-x: hidden;
+
+  --couleur-principale: #503AC0;
+  --couleur-secondaire: #322377;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("/src/assets/polices/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Poppins";
+  font-weight: bold;
+	src: url("/src/assets/polices/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+	font-family: "GoodTiming";
+  font-weight: bold;
+	src: url("/src/assets/polices/Good Timing/good timing bd.otf");
+}
+
+#root {
+  margin: 0 auto;
+  padding: 3%;
+  text-align: left;
 }
 
 a {
@@ -26,13 +59,17 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  background-image: linear-gradient(70deg, rgba(200, 200, 255, 0.5), rgb(230, 230, 255, 0.5));
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1.1;
+}
+
+h2 {
+  font-size: 2em;
 }
 
 button {

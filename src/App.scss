@@ -1,0 +1,19 @@
+main {
+
+    section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 5px;
+	    margin-right: 5px;
+        padding: 30px;
+
+        background-color: rgba(250, 250, 250, 0.7);
+        box-shadow: 16px 16px 30px rgba(0, 0, 0, 0.5), -8px -8px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+    }
+}
+
+.lien-section {
+	position: relative;
+	top: -100px;
+}

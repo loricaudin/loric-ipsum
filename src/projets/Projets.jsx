@@ -2,7 +2,7 @@ import Projet from "./Projet";
 import './Projet.scss'
 
 export default function Projets() {
-    return <div id="projets">
+    return <section id="projets">
         <h1>Mes projets</h1>
         <div>
             <div className="liste-projets">
@@ -215,5 +215,5 @@ export default function Projets() {
                 />
             </div> */}
         </div>
-    </div>
+    </section>
 }

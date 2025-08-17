@@ -2,7 +2,7 @@ import './Competence.scss'
 import Competence from './Competence'
 
 export default function Competences({}) {
-    return <div id="competences">
+    return <section id="competences">
         <h1>Mes compétences</h1>
         <div>
             <div className="liste-competences">
@@ -98,5 +98,5 @@ export default function Competences({}) {
                 </Competence>
             </div>
         </div>
-    </div>
+    </section>
 }

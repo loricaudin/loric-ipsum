@@ -1,0 +1,16 @@
+footer {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	height: 80px;
+	margin: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	box-shadow: 10px 5px 5px rgba(100, 100, 100, 0.5);
+
+	background-color: rgb(240, 240, 240);
+}

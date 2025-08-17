@@ -11,8 +11,6 @@ export default function Projet({ nomProjet, icone, anneeCreation, type, descript
         const nbImages = listeImages.length;
         let index = nouvellePosition;
 
-        console.log(positionPrecedente);
-        console.log(nouvellePosition);
         if (positionPrecedente != nouvellePosition) {
             if (index >= nbImages) {
                 index = 0;

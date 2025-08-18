@@ -13,6 +13,12 @@ main {
     }
 }
 
+.sombre main {
+    section {
+        background-color: rgba(5, 5, 5, 0.7);
+    }
+}
+
 .lien-section, .lien-page {
 	position: relative;
 	top: -100px;

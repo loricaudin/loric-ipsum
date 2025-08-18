@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Carre from "./Carre";
+import "./Decorations.scss"
 
 const NB_CARRES_ACCUEIL = 10;
 const NB_CARRES_PAGE = 100;
@@ -34,6 +35,7 @@ export default function Decorations({}) {
     
     
     return <>
+        <div className="fond"></div>
         {fondCarres.map((carre, index) => (
             (index % 2 === 0) ?
                 <Carre key={index} taille={carre["taille"] + "px"} x={"calc(" + carre["x"] + "vw - 100px)"} y={"calc(" + carre["y"] + "px - 100px)"}/>

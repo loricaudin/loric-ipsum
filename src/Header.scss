@@ -34,6 +34,7 @@ header {
             border-radius: 5px;
             margin-left: 10px;
             margin-right: 10px;
+            transition: all 0.5s;
 
             &:hover {
                 background-color: rgba(200, 200, 230, 0.5);
@@ -266,6 +267,72 @@ header {
             
             .ouvert #bar-nav-3{
                 transform: translate(0, -13px) rotate(45deg);
+            }
+        }
+    }
+}
+
+.sombre header {
+	background-color: rgb(10, 10, 30);
+	box-shadow: 10px 5px 5px rgba(100, 100, 100, 0.1);
+
+    &>div {
+        
+        div {
+            &:hover {
+                background-color: rgba(200, 200, 230, 0.5);
+            }
+
+            &:focus {
+                background-color: rgba(150, 150, 200, 0.5);
+            }
+        }
+    }
+    
+    h1 {
+        a {
+            color: white;
+        }
+    }
+
+    nav {
+        ul li a {
+            color: white;
+        }
+
+        ul li a:hover{
+            color: var(--couleur-tertiaire);
+            background-color: rgba(200, 200, 230, 0.5);
+        }
+
+        ul li a:focus{
+            background-color: rgba(150, 150, 200, 0.5);
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+
+        @keyframes ouvrir-elt-nav {
+            from{
+                color: rgba(255, 255, 255, 0);
+            }
+
+            to{
+                color: rgb(255, 255, 255, 1);
+            }
+        }
+
+        #bouton-menu-nav {
+            &:hover {
+                background-color: rgba(200, 200, 230, 0.5);
+            }
+
+            &:focus {
+                background-color: rgba(150, 150, 200, 0.5);
+            }
+
+            #bar-nav-1, #bar-nav-2, #bar-nav-3{
+                background-color: white;
             }
         }
     }

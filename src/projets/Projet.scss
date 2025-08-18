@@ -154,3 +154,43 @@
         }
     }
 }
+
+.sombre .projets {
+    
+    & > div {
+        .liste-projets {
+            .projet {
+
+                .competence-associee {
+                    background-color: var(--couleur-principale);
+                    color: white;
+
+                    &:hover {
+                        background-color: var(--couleur-tertiaire);
+                    }
+                }
+
+                .technologie-utilisee {
+                    background-color: var(--couleur-secondaire);
+                }
+            
+                .imageRealisationPrecedente, .imageRealisationSuivante {
+                    color: white;
+                    background: rgba(0, 0, 0, .5);
+                }
+                
+                .imageRealisationPrecedente:hover, .imageRealisationSuivante:hover {
+                    background: rgba(0, 0, 0, .8);
+                }
+            
+                .lienImageRealisation {
+                    background: #ddd;
+                }
+                
+                .imageRealisationActive, .lienImageRealisation:hover {
+                    background: #717171;
+                }
+            }
+        }
+    }
+}

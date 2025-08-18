@@ -2,7 +2,6 @@
     line-height: 1.5;
     font-weight: 400;
 
-    color: #213547;
     background-color: #ffffff;
 
     font-synthesis: none;
@@ -59,61 +58,92 @@ a:hover {
   color: #747bff;
 }
 
+.sombre a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+.sombre  a:hover {
+  color: #747bff;
+}
+
 body {
     margin: 0;
     display: flex;
+    color: #213547;
     place-items: center;
     min-height: 100vh;
-  background-image: linear-gradient(70deg, rgba(200, 200, 255, 0.5), rgb(230, 230, 255, 0.5));
+    background-image: linear-gradient(70deg, rgba(200, 200, 255, 0.5), rgba(230, 230, 255, 0.5));
+}
+
+body.sombre {
+    color: #e9e5ff;
+    background-image: linear-gradient(70deg, rgba(10, 10, 100, 0.7), rgba(30, 30, 100, 0.7));
+}
+
+.clair-affichage {
+    display: block;
+}
+
+body.sombre .clair-affichage {
+    display: none;
+}
+
+.sombre-affichage {
+    display: none;
+}
+
+body.sombre .sombre-affichage {
+    display: block;
 }
 
 h1 {
-  font-size: 3em;
-  line-height: 1.1;
-  margin-top: 10px;
-  margin-bottom: 10px;
+    font-size: 3em;
+    line-height: 1.1;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 2em;
-  margin-top: 10px;
-  margin-bottom: 10px;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  color: white;
-  background-color: var(--couleur-principale);
-  cursor: pointer;
-  transition: all 0.25s;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: white;
+    background-color: var(--couleur-principale);
+    cursor: pointer;
+    transition: all 0.25s;
 }
 button:hover {
-  background-color: var(--couleur-tertiaire);
+    background-color: var(--couleur-tertiaire);
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+    outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media screen and (max-width: 500px) {
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
 }
 
 @media screen and (max-width: 500px) {
-  h1 {
-    font-size: 1.5em;
-  }
-  h2 {
-    font-size: 1.2em;
-  }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
 }

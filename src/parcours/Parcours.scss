@@ -87,3 +87,20 @@
         }
     }
 }
+
+.sombre .parcours {
+    & > div {
+        .parcours-chronologique {
+            .elt-parcours {
+                &::before {
+                    border: 5px solid black;
+                }
+    
+                &.en-cours::before {
+                    background-color: white;
+                    border: 5px solid var(--couleur-principale);
+                }
+            }
+        }
+    }
+}

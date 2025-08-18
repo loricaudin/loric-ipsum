@@ -10,7 +10,11 @@ footer {
 	padding-left: 10px;
 	padding-right: 10px;
 	border-radius: 20px;
-	box-shadow: 10px 5px 5px rgba(100, 100, 100, 0.5);
+	box-shadow: 16px 16px 30px rgba(0, 0, 0, 0.5), -8px -8px 20px rgba(0, 0, 0, 0.1);
 
 	background-color: rgb(240, 240, 255);
+}
+
+.sombre footer {
+	background-color: rgb(30, 30, 70);
 }

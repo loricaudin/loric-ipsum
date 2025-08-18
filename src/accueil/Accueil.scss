@@ -43,3 +43,12 @@
         -webkit-text-fill-color: transparent;
     }
 }
+
+.sombre #accueil {
+
+    h1, h2 {
+        background: linear-gradient(90deg, var(--couleur-tertiaire), var(--couleur-quaternaire)); /* Dégradé horizontal */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

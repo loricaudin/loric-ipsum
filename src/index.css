@@ -1,31 +1,30 @@
 :root {
-  line-height: 1.5;
-  font-weight: 400;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    color: #213547;
+    background-color: #ffffff;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html, body {
-  font-family: Poppins, Calibri, Arial, sans-serif;
+    font-family: Poppins, Calibri, Arial, sans-serif;
 
 	scroll-behavior: smooth;
 	overflow-y: scroll;
-  overflow-x: hidden;
+    overflow-x: hidden;
 
-  width: 100vw;
-  position: relative;
+    width: 100vw;
+    position: relative;
 
-  --couleur-principale: #503AC0;
-  --couleur-secondaire: #322377;
-  --couleur-tertiaire: #a998ff;
-  --couleur-quaternaire: #e9e5ff;
+    --couleur-principale: #503AC0;
+    --couleur-secondaire: #322377;
+    --couleur-tertiaire: #a998ff;
+    --couleur-quaternaire: #e9e5ff;
 }
 
 @font-face {
@@ -57,14 +56,14 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #747bff;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-height: 100vh;
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-height: 100vh;
   background-image: linear-gradient(70deg, rgba(200, 200, 255, 0.5), rgb(230, 230, 255, 0.5));
 }
 
@@ -89,6 +88,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   color: white;
+  background-color: var(--couleur-principale);
   cursor: pointer;
   transition: all 0.25s;
 }
@@ -98,19 +98,6 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: var(--couleur-principale);
-  }
 }
 
 @media screen and (max-width: 500px) {

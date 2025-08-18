@@ -3,6 +3,16 @@ import './Header.scss'
 
 export default function Header() {
     const [menuOuvert, setMenuOuvert] = useState(false);
+    const [theme, setTheme] = useState(null);
+
+    const basculerClairSombre = () => {
+        if (document.body.className.includes("sombre")) {
+            document.body.className = "clair";
+        } else {
+            document.body.className = "sombre";
+        }
+        setTheme(document.body.className);
+    }
 
     const ouvrirFermerMenuNav = () => {
         setMenuOuvert(prev => !prev);
@@ -28,7 +38,7 @@ export default function Header() {
                     <li><a href="#contact" onClick={ouvrirFermerMenuNav}>Contact</a></li>
                 </ul>
             </nav>
-            <div><img src="/images/mode-sombre.png"/></div>
+            <div onClick={basculerClairSombre}><img src={(theme !== "sombre") ? "/images/mode-sombre.png" : "/images/mode-clair.png"}/></div>
         </div>
     </header>
 }

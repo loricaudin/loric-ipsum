@@ -1,14 +1,25 @@
-#competences {
+.competences {
 
     .liste-competences {
 
         .competence {
+            border: 1px solid var(--couleur-secondaire);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+
             h1 {
                 font-size: 20px;
             }
     
             h2 {
                 font-size: 14px;
+            }
+
+            .competence-titre {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
             }
         }
     }

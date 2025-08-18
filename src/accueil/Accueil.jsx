@@ -4,6 +4,8 @@ export default function Accueil() {
     return <span>
         <section id="accueil">
             <h1>Bienvenue sur mon portfolio !</h1>
+            <h2>C'est ici que tout commence !</h2>
+            <a href="#presentation"><button>C'est parti</button></a>
             {/* <p></p>
             <div class="mode-affichage">
                 <h2>Comment voulez-vous visiter le portfolio ?</h2>

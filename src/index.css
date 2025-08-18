@@ -24,6 +24,8 @@ html, body {
 
   --couleur-principale: #503AC0;
   --couleur-secondaire: #322377;
+  --couleur-tertiaire: #a998ff;
+  --couleur-quaternaire: #e9e5ff;
 }
 
 @font-face {
@@ -117,5 +119,14 @@ button:focus-visible {
   }
   h2 {
     font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.2em;
   }
 }

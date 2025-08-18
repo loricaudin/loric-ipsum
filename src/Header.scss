@@ -26,17 +26,93 @@ header {
         display: none;
     }
 
+    h1 {
+        text-decoration: none;
+        cursor: pointer;
+        margin: 15px;
+
+        img {
+            height: 50px;
+
+            @media screen and (max-width: (350px)) {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                height: 30px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 30px;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            transition: all 0.5s;
+
+            @media screen and (max-width: (350px)) {
+                font-size: 15px;
+            }
+        }
+    }
+
+    /*
+    .cache-dessous-header{
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 0;
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-right: 5px;
+        height: 80px;
+        background-color: rgb(255, 255, 255);
+    } /* Retrait de la marge du header en haut */
+
+    nav {
+        padding-right: 10px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        ul li a {
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            padding: 16px;
+            transition: all 0.5s;
+        }
+
+        ul li a:hover{
+            color: var(--couleur-principale);
+            background-color: rgba(200, 200, 230, 0.5);
+        }
+
+        ul li a:focus{
+            background-color: rgba(150, 150, 200, 0.5);
+        }
+    }
+
     @media screen and (max-width: 1000px) {
         display: flex;
 		flex-direction: column;
 
-        .header-ouvert{
+        --taille-header-ouvert: 440px;
+
+        &.header-ouvert{
             animation-duration: 0.5s;
             animation-name: ouvrir-header;
-            height: 360px;
+            height: var(--taille-header-ouvert);
         }
 
-        .header-ferme{
+        &.header-ferme{
             animation-duration: 0.5s;
             animation-name: fermer-header;
             height: 80px;
@@ -47,7 +123,7 @@ header {
                 height: 80px;
             }
             to{
-                height: 360px;
+                height: var(--taille-header-ouvert);
             }
         }
 
@@ -77,23 +153,21 @@ header {
             padding-right: 0px;
             width: 100%;
 
-            .nav-ouvert {
+            &.nav-ouvert {
                 display: inline-block;
             }
 
             ul {
                 display: inline-flex;
                 flex-direction: column;
-                width: 100%;
-        	}
-
-            ul li {
-                width: 100%;
-            }
-
-            ul li a {
-                display: inline-block;
-                width: calc(100% - 32px);
+                width: 95%;
+                li {
+                    width: 100%;
+                    a {
+                        display: inline-block;
+                        width: calc(100% - 32px);
+                    }
+                }
             }
         }
 
@@ -152,80 +226,6 @@ header {
             .ouvert #bar-nav-3{
                 transform: translate(0, -13px) rotate(45deg);
             }
-        }
-    }
-
-    h1 {
-        text-decoration: none;
-        cursor: pointer;
-        margin: 15px;
-
-        img {
-            height: 50px;
-
-            @media screen and (max-width: (400px)) {
-                margin-top: 10px;
-                margin-bottom: 10px;
-                height: 30px;
-            }
-        }
-
-        a {
-            text-decoration: none;
-            font-weight: normal;
-            font-size: 30px;
-            color: black;
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            align-items: center;
-            transition: all 0.5s;
-
-            @media screen and (max-width: (400px)) {
-                font-size: 15px;
-            }
-        }
-    }
-
-    /*
-    .cache-dessous-header{
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        z-index: 0;
-        width: calc(100% - 10px);
-        margin-left: 5px;
-        margin-right: 5px;
-        height: 80px;
-        background-color: rgb(255, 255, 255);
-    } /* Retrait de la marge du header en haut */
-
-    nav {
-        padding-right: 10px;
-
-        ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-direction: row;
-        }
-
-        ul li a {
-            border-radius: 5px;
-            text-decoration: none;
-            color: black;
-            cursor: pointer;
-            padding: 16px;
-            transition: all 0.5s;
-        }
-
-        ul li a:hover{
-            color: var(--couleur-principale);
-            background-color: rgba(200, 200, 230, 0.5);
-        }
-
-        ul li a:focus{
-            background-color: rgba(150, 150, 200, 0.5);
         }
     }
 }

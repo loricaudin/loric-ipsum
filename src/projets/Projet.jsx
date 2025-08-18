@@ -66,41 +66,60 @@ export default function Projet({ nomProjet, icone, anneeCreation, type, descript
     };
 
     return (
-        <div className="projet">
-            <div>
-                <h1>{nomProjet}</h1>
-                <h2>Année de création : {anneeCreation}</h2>
-                <p>{description}</p>
+        <>
+            <a className="lien-page" id={nomProjet}></a>
+            <div className="projet">
                 <div>
-                    {lienTelechargement && <a href={lienTelechargement} target="_blank"><button>Télécharger l'application</button></a>}
-                    {lienSite && <a href={lienSite} target="_blank"><button>Visiter le site</button></a>}
-                    {lienCodeSource && <a href={lienCodeSource} target="_blank"><button>Voir le code source</button></a>}
+                    <h1>{nomProjet}</h1>
+                    <h2>Année de création : {anneeCreation}</h2>
+                    {(listeTechnologies) && (
+                        <h3>Technologies :
+                        {
+                            listeTechnologies.map((technologie, index) => (
+                                <span key={index} className="technologie-utilisee">{technologie}</span>
+                            ))
+                        }
+                    </h3>)}
+                    <p>{description}</p>
+                    {(listeCompetences) && (
+                        <h3>Compétences associées au projet : 
+                        {
+                            listeCompetences.map((competence, index) => (
+                                <a key={index} className="competence-associee" href={"#" + competence}>{competence}</a>
+                            ))
+                        }
+                    </h3>)}
+                    <div>
+                        {lienTelechargement && <a href={lienTelechargement} target="_blank"><button>Télécharger l'application</button></a>}
+                        {lienSite && <a href={lienSite} target="_blank"><button>Visiter le site</button></a>}
+                        {lienCodeSource && <a href={lienCodeSource} target="_blank"><button>Voir le code source</button></a>}
+                    </div>
                 </div>
-            </div>
 
-            {listeImages && (
-                <div>
-                    <div className="diaporamaRealisations">
-                        <div className="imageRealisation" ref={diaporamaRef}>
-                            {listeImages.map((image, index) => (
-                                <div className="image" key={index}><img src={"/images/projets/" + image + ".png"}/></div>
+                {listeImages && (
+                    <div>
+                        <div className="diaporamaRealisations">
+                            <div className="imageRealisation" ref={diaporamaRef}>
+                                {listeImages.map((image, index) => (
+                                    <div className="image" key={index}><img src={"/images/projets/" + image + ".png"}/></div>
+                                ))}
+                            </div>
+                            <a className="imageRealisationPrecedente" onClick={() => deplacerImageDiaporama(-1)}>❮</a>
+                            <a className="imageRealisationSuivante" onClick={() => deplacerImageDiaporama(1)}>❯</a>
+                        </div>
+                        <br />
+                        <div className="diaporamaListePoints">
+                            {listeImages.map((_, index) => (
+                                <span
+                                    key={index}
+                                    className={`lienImageRealisation${index === indexDiaporama ? ' imageRealisationActive' : ''}`}
+                                    onClick={() => changerImageDiaporama(index)}
+                                ></span>
                             ))}
                         </div>
-                        <a className="imageRealisationPrecedente" onClick={() => deplacerImageDiaporama(-1)}>❮</a>
-                        <a className="imageRealisationSuivante" onClick={() => deplacerImageDiaporama(1)}>❯</a>
                     </div>
-                    <br />
-                    <div className="diaporamaListePoints">
-                        {listeImages.map((_, index) => (
-                            <span
-                                key={index}
-                                className={`lienImageRealisation${index === indexDiaporama ? ' imageRealisationActive' : ''}`}
-                                onClick={() => changerImageDiaporama(index)}
-                            ></span>
-                        ))}
-                    </div>
-                </div>
-            )}
-        </div>
+                )}
+            </div>
+        </>
     );
 }

@@ -11,7 +11,8 @@ export default function Competences({}) {
                     <h2>Compétences BUT</h2>
                     <Competence
                         intituleCompetence={"Réaliser un développement d’application"}
-                        codeCompetence={"BUT C1"}>
+                        codeCompetence={"BUT C1"}
+                        listeProjets={["Ramses", "PLATINE", "Codenames", "Pacman", "GogoItinero", "Racylist", "BRAP Education", "LS Santé", "Secret-R"]}>
                         <p>
                             Cette compétence consiste à développer, c’est-à-dire concevoir, coder,
                             tester et intégrer une solution informatique pour un client.
@@ -25,7 +26,8 @@ export default function Competences({}) {
                     </Competence>
                     <Competence
                         intituleCompetence={"Optimiser des applications informatiques"}
-                        codeCompetence={"BUT C2"}>
+                        codeCompetence={"BUT C2"}
+                        listeProjets={["Ramses", "PLATINE", "Codenames", "Pacman", "GogoItinero", "Racylist", "BRAP Education", "LS Santé"]}>
                         <p>
                             Cette compétence consiste à proposer des applications informatiques
                             optimisées en fonction du temps d’exécution, de la précision, de la
@@ -40,7 +42,8 @@ export default function Competences({}) {
                     </Competence>
                     <Competence
                         intituleCompetence={"Administrer des systèmes informatiques communicants complexes"}
-                        codeCompetence={"BUT C3"}>
+                        codeCompetence={"BUT C3"}
+                        listeProjets={["Ramses", "PLATINE", "GogoItinero", "Racylist", "BRAP Education"]}>
                         <p>
                             Cette compétence consiste à installer, configurer, mettre à disposition,
                             maintenir en conditions opérationnelles des infrastructures, des services et
@@ -54,7 +57,8 @@ export default function Competences({}) {
                     </Competence>
                     <Competence
                         intituleCompetence={"Gérer des données de l’information"}
-                        codeCompetence={"BUT C4"}>
+                        codeCompetence={"BUT C4"}
+                        listeProjets={["Ramses", "PLATINE", "GogoItinero", "Racylist", "BRAP Education"]}>
                         <p>
                             Cette compétence consiste à concevoir, gérer, administrer et exploiter les
                             données de l’entreprise et mettre à disposition toutes les informations pour
@@ -69,7 +73,8 @@ export default function Competences({}) {
                     </Competence>
                     <Competence
                         intituleCompetence={"Conduire un projet"}
-                        codeCompetence={"BUT C5"}>
+                        codeCompetence={"BUT C5"}
+                        listeProjets={["Ramses", "PLATINE", "GogoItinero", "Racylist", "BRAP Education", "LS Santé", "Yourfood"]}>
                         <p>
                             Cette compétence consiste à satisfaire les besoins des utilisateurs au
                             regard de la chaîne de valeur du client, organiser et piloter un projet
@@ -83,7 +88,8 @@ export default function Competences({}) {
                     </Competence>
                     <Competence
                         intituleCompetence={"Travailler dans une équipe informatique"}
-                        codeCompetence={"BUT C6"}>
+                        codeCompetence={"BUT C6"}
+                        listeProjets={["Ramses", "PLATINE", "Codenames", "Pacman", "Racylist", "BRAP Education"]}>
                         <p>
                             Cette compétence consiste à acquérir, développer et exploiter les aptitudes
                             nécessaires pour travailler efficacement dans une équipe informatique.

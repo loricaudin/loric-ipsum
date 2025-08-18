@@ -6,6 +6,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: center;
                 gap: 10px;
                 margin-top: 30px;
                 margin-bottom: 30px;
@@ -25,6 +26,13 @@
                     flex-wrap: wrap;
                     align-items: center;
                     gap: 5px;
+                }
+
+                .projet-action {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 10px;
                 }
 
                 .competence-associee {
@@ -60,13 +68,22 @@
                 }
                 
                 .imageRealisation {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                }
-                .imageRealisation img{
-                    width: 30vw !important;
-                    height: 100%;
+                    display: grid;
+                    grid-auto-flow: column;
+                    
+                    .image-projet {
+                        width: 30vw !important;
+                        height: 100%;
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        
+                        img {
+                            max-width: 30vw;
+                            max-height: 25vw;
+                        }
+                    }
                 }
             
                 .imageRealisationPrecedente, .imageRealisationSuivante {
@@ -76,14 +93,13 @@
                     top: 50%;
                     transform: translate(0, -50%);
                     padding: 16px;
-                    border-radius: 0 3px 3px 0;
+                    border-radius: 3px;
                     background: rgba(0, 0, 0, .5);
                     transition: all .3s;
                 }
             
                 .imageRealisationSuivante {
                     right: 0;
-                    border-radius: 3px 0 0 3px;
                 }
                 
                 .imageRealisationPrecedente:hover, .imageRealisationSuivante:hover {
@@ -122,9 +138,16 @@
                         transition: all 1s;
                     }
                 
-                    .imageRealisation img{
-                        width: 70vw !important;
-                        height: 100%;
+                    .imageRealisation {
+
+                        .image-projet {
+                            width: 70vw !important;
+
+                            img {
+                                max-width: 70vw;
+                                max-height: 50vw;
+                            }
+                        }
                     }
                 }
             }

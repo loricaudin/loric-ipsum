@@ -21,6 +21,28 @@
                 flex-direction: row;
                 justify-content: space-between;
             }
+
+            .liste-projets-competence {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .projet-associe {
+                    background-color: var(--couleur-principale);
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    border-radius: 5px;
+                    color: white;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        background-color: var(--couleur-tertiaire);
+                    }
+                }
+            }
         }
     }
 }

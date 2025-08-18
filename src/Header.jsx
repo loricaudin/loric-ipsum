@@ -17,15 +17,18 @@ export default function Header() {
             </div>
         </button>
         <h1><a href="#"><img src="/images/icone.png"/> Loric Ipsum</a></h1>
-        <nav className={menuOuvert ? "nav-ouvert" : ""}>
-            <ul>
-                <li><a href="#presentation" onClick={ouvrirFermerMenuNav}>Présentation</a></li>
-                <li><a href="#parcours" onClick={ouvrirFermerMenuNav}>Parcours</a></li>
-                <li><a href="#competences" onClick={ouvrirFermerMenuNav}>Compétences</a></li>
-                <li><a href="#technologies" onClick={ouvrirFermerMenuNav}>Technologies</a></li>
-                <li><a href="#projets" onClick={ouvrirFermerMenuNav}>Projets</a></li>
-                <li><a href="#contact" onClick={ouvrirFermerMenuNav}>Contact</a></li>
-            </ul>
-        </nav>
+        <div>
+            <nav className={menuOuvert ? "nav-ouvert" : ""}>
+                <ul>
+                    <li><a href="#presentation" onClick={ouvrirFermerMenuNav}>Présentation</a></li>
+                    <li><a href="#parcours" onClick={ouvrirFermerMenuNav}>Parcours</a></li>
+                    <li><a href="#competences" onClick={ouvrirFermerMenuNav}>Compétences</a></li>
+                    <li><a href="#technologies" onClick={ouvrirFermerMenuNav}>Technologies</a></li>
+                    <li><a href="#projets" onClick={ouvrirFermerMenuNav}>Projets</a></li>
+                    <li><a href="#contact" onClick={ouvrirFermerMenuNav}>Contact</a></li>
+                </ul>
+            </nav>
+            <div><img src="/images/mode-sombre.png"/></div>
+        </div>
     </header>
 }

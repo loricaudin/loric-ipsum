@@ -21,6 +21,48 @@ header {
 
 	background-color: rgb(245, 245, 255);
 	box-shadow: 10px 5px 5px rgba(100, 100, 100, 0.1);
+
+    &>div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        div {
+            padding: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            &:hover {
+                background-color: rgba(200, 200, 230, 0.5);
+            }
+
+            &:focus {
+                background-color: rgba(150, 150, 200, 0.5);
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            align-items: flex-start;
+            width: 100%;
+
+            div {
+                position: fixed;
+                top: 15px;
+                right: 20px;
+
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+        }
+    }
     
     #bouton-menu-nav {
         display: none;
@@ -72,7 +114,6 @@ header {
     } /* Retrait de la marge du header en haut */
 
     nav {
-        padding-right: 10px;
 
         ul {
             list-style: none;

@@ -38,7 +38,7 @@ export default function Projet({ nomProjet, icone, anneeCreation, type, descript
                 }
 
                 const largeur = document.documentElement.clientWidth;
-                const translateX = largeur >= 700 ? - positionActuelle * 30 : - positionActuelle * 70;
+                const translateX = largeur >= 1000 ? - positionActuelle * 30 : - positionActuelle * 70;
 
                 if (diaporamaRef.current) {
                     diaporamaRef.current.style.transform = `translateX(${translateX}vw)`;
@@ -89,10 +89,12 @@ export default function Projet({ nomProjet, icone, anneeCreation, type, descript
                             ))
                         }
                     </h3>)}
-                    <div>
+                    <div className="projet-action">
                         {lienTelechargement && <a href={lienTelechargement} target="_blank"><button>Télécharger l'application</button></a>}
                         {lienSite && <a href={lienSite} target="_blank"><button>Visiter le site</button></a>}
                         {lienCodeSource && <a href={lienCodeSource} target="_blank"><button>Voir le code source</button></a>}
+                        {lienCodeSourceFront && <a href={lienCodeSourceFront} target="_blank"><button>Voir le code source Frontend</button></a>}
+                        {lienCodeSourceBack && <a href={lienCodeSourceBack} target="_blank"><button>Voir le code source Backend</button></a>}
                     </div>
                 </div>
 
@@ -101,22 +103,31 @@ export default function Projet({ nomProjet, icone, anneeCreation, type, descript
                         <div className="diaporamaRealisations">
                             <div className="imageRealisation" ref={diaporamaRef}>
                                 {listeImages.map((image, index) => (
-                                    <div className="image" key={index}><img src={"/images/projets/" + image + ".png"}/></div>
+                                    <div className="image-projet" key={index}><img src={"/images/projets/" + image + ".png"}/></div>
                                 ))}
                             </div>
-                            <a className="imageRealisationPrecedente" onClick={() => deplacerImageDiaporama(-1)}>❮</a>
-                            <a className="imageRealisationSuivante" onClick={() => deplacerImageDiaporama(1)}>❯</a>
+                            {
+                                (listeImages.length > 1) && <>
+                                    <a className="imageRealisationPrecedente" onClick={() => deplacerImageDiaporama(-1)}>❮</a>
+                                    <a className="imageRealisationSuivante" onClick={() => deplacerImageDiaporama(1)}>❯</a>
+                                </>
+                            }
+                            
+                        </div>
+                        <div className="diaporamaListePoints">
+                            {
+                                (listeImages.length > 1) && (
+                                    listeImages.map((_, index) => (
+                                        <span
+                                            key={index}
+                                            className={`lienImageRealisation${index === indexDiaporama ? ' imageRealisationActive' : ''}`}
+                                            onClick={() => changerImageDiaporama(index)}
+                                        ></span>
+                                    ))
+                                )
+                            }
                         </div>
                         <br />
-                        <div className="diaporamaListePoints">
-                            {listeImages.map((_, index) => (
-                                <span
-                                    key={index}
-                                    className={`lienImageRealisation${index === indexDiaporama ? ' imageRealisationActive' : ''}`}
-                                    onClick={() => changerImageDiaporama(index)}
-                                ></span>
-                            ))}
-                        </div>
                     </div>
                 )}
             </div>

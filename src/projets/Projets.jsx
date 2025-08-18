@@ -20,7 +20,6 @@ export default function Projets() {
                         lienTelechargement={""}
                         lienSite={""}
                         lienCodeSource={""}
-                        listeImages={[]}
                         listeTechnologies={["Python", "C", "Kotlin"]}
                     />
                     <Projet
@@ -34,6 +33,7 @@ export default function Projets() {
                         lienSite={"https://loricaudin.github.io/loric-informatique/"}
                         lienCodeSource={"https://github.com/loricaudin/loric-informatique"}
                         listeImages={["loric-informatique-01", "loric-informatique-02"]}
+                        listeTechnologies={["HTML", "CSS", "JavaScript", "Python"]}
                     />
                     <Projet
                         nomProjet={"Loric Révisions"}
@@ -47,6 +47,7 @@ export default function Projets() {
                         lienSite={""}
                         lienCodeSource={""}
                         listeImages={["loric-revisions-01", "loric-revisions-02", "loric-revisions-03", "loric-revisions-04"]}
+                        listeTechnologies={["HTML", "CSS", "JavaScript", "Python"]}
                     />
                 </div>
                 <div className="liste-projets">
@@ -96,7 +97,7 @@ export default function Projets() {
                         lienSite={""}
                         lienCodeSourceFront={"https://github.com/loricaudin-projets-academiques/PLATINE-Front-end"}
                         lienCodeSourceBack={"https://github.com/loricaudin-projets-academiques/PLATINE-Back-end"}
-                        /* listeImages={["iut-platine-01"]} */
+                        listeImages={["iut-platine-01"]}
                         listeCompetences={["BUT C1", "BUT C2", "BUT C3", "BUT C4", "BUT C5", "BUT C6"]}
                         listeTechnologies={["React", "Tailwind CSS", "Next", "Express", "TypeScript", "Prisma", "PostgreSQL", "Docker"]}
                     />
@@ -124,7 +125,7 @@ export default function Projets() {
                         lienTelechargement={""}
                         lienSite={""}
                         lienCodeSource={"https://github.com/loricaudin-projets-academiques/GogoItinero"}
-                        /* listeImages={["iut-gogoitinero-01", "iut-gogoitinero-02", "iut-gogoitinero-03", "iut-gogoitinero-04", "iut-gogoitinero-05", "iut-gogoitinero-06", "iut-gogoitinero-07", "iut-gogoitinero-08", "iut-gogoitinero-09"]} */
+                        listeImages={["iut-gogoitinero-01", "iut-gogoitinero-02", "iut-gogoitinero-03", "iut-gogoitinero-04", "iut-gogoitinero-05"]}
                         listeCompetences={["BUT C1", "BUT C2", "BUT C3", "BUT C4", "BUT C5"]}
                         listeTechnologies={["Kotlin"]}
                     />

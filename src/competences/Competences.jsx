@@ -1,10 +1,11 @@
-import './Competence.scss'
+import Section from '../Section'
 import Competence from './Competence'
+import './Competence.scss'
 
 export default function Competences({}) {
     return <>
         <a className="lien-section" id="competences"></a>
-        <section className="competences">
+        <Section classe="competences">
             <h1>Mes compétences</h1>
             <div>
                 <div className="liste-competences">
@@ -103,6 +104,6 @@ export default function Competences({}) {
                     </Competence>
                 </div>
             </div>
-        </section>
+        </Section>
     </>
 }

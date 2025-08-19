@@ -1,3 +1,4 @@
+import Section from '../Section';
 import './Presentation.scss'
 
 function calculerAge(dateAnniversaire) {
@@ -15,7 +16,7 @@ export default function Presentation() {
     const age = calculerAge(new Date('2004-05-27'));
     return <>
         <a className="lien-section" id="presentation"></a>
-        <section className="presentation">
+        <Section classe="presentation">
             <h1>Qui suis-je ?</h1>
             <div>
                 <p>
@@ -30,6 +31,6 @@ export default function Presentation() {
                 </p>
                 <img className="profil" src="/images/moi.jpg"/>
             </div>
-        </section>
+        </Section>
     </>
 }

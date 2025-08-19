@@ -1,10 +1,11 @@
+import Section from "../Section";
 import Projet from "./Projet";
 import './Projet.scss'
 
 export default function Projets() {
     return <>
         <a className="lien-section" id="projets"></a>
-        <section className="projets">
+        <Section classe="projets">
             <h1>Mes projets</h1>
             <div>
                 <div className="liste-projets">
@@ -219,6 +220,6 @@ export default function Projets() {
                     />
                 </div> */}
             </div>
-        </section>
+        </Section>
     </>
 }

@@ -1,10 +1,11 @@
 import "./Technologie.scss";
 import Technologie from "./Technologie";
+import Section from "../Section";
 
 export default function Technologies() {
     return <>
         <a className="lien-section" id="technologies"></a>
-        <section className="technologies">
+        <Section classe="technologies">
             <h1>Mes technologies</h1>
             <div>
                 <div className="liste-technologies">
@@ -271,6 +272,6 @@ export default function Technologies() {
                     </div>
                 </div> */}
             </div>
-        </section>
+        </Section>
     </>
 }

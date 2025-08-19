@@ -1,7 +1,9 @@
+import Section from "../Section";
+
 export default function Contact() {
     return <>
         <a className="lien-section" id="contact"></a>
-        <section className="contact">
+        <Section classe="contact">
             <div>
                 <h1>Vous voulez me contactez ?</h1>
                 <p>Toutes mes infos se trouvent ici :</p>
@@ -11,6 +13,6 @@ export default function Contact() {
                     <li>Numéro de téléphone : <a href="tel:+33644764441">06 44 76 44 41</a></li>
                 </ul>
             </div>
-        </section>
+        </Section>
     </>
 }

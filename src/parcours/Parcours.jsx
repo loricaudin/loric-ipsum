@@ -1,10 +1,11 @@
+import Section from '../Section'
 import ElementParcours from './ElementParcours'
 import './Parcours.scss'
 
 export default function Parcours() {
     return <>
         <a className="lien-section" id="parcours"></a>
-        <section className="parcours">
+        <Section classe="parcours">
             <h1>Mon parcours</h1>
             <div>
                 <div className="parcours-chronologique">
@@ -54,6 +55,6 @@ export default function Parcours() {
                     />
                 </div>
             </div>
-        </section>
+        </Section>
     </>
 }

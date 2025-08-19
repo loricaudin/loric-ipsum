@@ -7,7 +7,8 @@ export default function Carre({taille, x, y, couleur}) {
         height: taille,
         borderRadius: "15%",
         boxShadow: "16px 16px 30px rgba(0, 0, 0, 0.5), -8px -8px 20px rgba(0, 0, 0, 0.1)",
-        zIndex: -1
+        zIndex: -1,
+        transform: "scale(1)"
     }
 
     if (!couleur) {
@@ -15,6 +16,6 @@ export default function Carre({taille, x, y, couleur}) {
     } else {
         styleCarre.backgroundColor = couleur
     }
-    return <span style={styleCarre}>
+    return <span style={{}}><span className={"carre"} style={styleCarre}></span>
     </span>
 }

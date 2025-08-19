@@ -1,5 +1,56 @@
 .technologies {
     
+	.liste-technologies {
+		&>div {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 10px;
+
+			.technologie {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				width: 100px;
+				height: 100px;
+				padding: 10px;
+				border-radius: 10px;
+				background-color: var(--couleur-principale);
+
+				&>div {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+
+				.techno-avec-texte {
+					
+					img {
+						max-width: 50px;
+						max-height: 50px;
+					}
+
+					p {
+						color: white;
+						font-size: 20px;
+						font-weight: bold;
+						margin: 0;
+					}
+				}
+
+				.techno-sans-texte {
+					img {
+						max-width: 80px;
+						max-height: 80px;
+					}
+				}
+				
+			}
+		}
+	}
 }
 
 /* TODO */
@@ -9,9 +60,7 @@
 	padding: 10px;
 }
 #section-technologies .listeTechnologies{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	
 }
 
 /* Langages */

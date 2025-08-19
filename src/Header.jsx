@@ -1,9 +1,18 @@
 import { useState } from 'react';
 import './Header.scss'
 
+let demarrage = true;
+
 export default function Header() {
     const [menuOuvert, setMenuOuvert] = useState(false);
     const [theme, setTheme] = useState(null);
+
+    console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    if (demarrage == true && window.matchMedia('(prefers-color-scheme: dark)').matches == true) {
+        demarrage = false;
+        document.body.className = "sombre";
+        setTheme("sombre");
+    }
 
     const basculerClairSombre = () => {
         if (document.body.className.includes("sombre")) {

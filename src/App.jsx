@@ -14,19 +14,19 @@ function App() {
 
     return (
         <>
-        <Header/>
-        <main>
-            <Accueil/>
-            <Presentation/>
-            <Parcours/>
-            <Competences/>
-            <Technologies/>
-            <Projets/>
-            <Contact/>
-        </main>
-        <Footer/>
+            <Header />
+            <main>
+                <Accueil />
+                <Presentation />
+                <Parcours />
+                <Competences />
+                <Technologies />
+                <Projets />
+                <Contact />
+            </main>
+            <Footer />
 
-        <Decorations/>
+            <Decorations />
         </>
     )
 }

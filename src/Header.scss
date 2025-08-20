@@ -1,36 +1,36 @@
 header {
-	/* Pour fixer le header */
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	z-index: 1;
-	height: 80px;
-	margin-top: 0px; /* Retrait de la marge du header en haut */
+    /* Pour fixer le header */
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    height: 80px;
+    margin-top: 0px;
+    /* Retrait de la marge du header en haut */
     padding-left: 10px;
-	padding-right: 10px;
+    padding-right: 10px;
     width: calc(100vw - 20px);
-	/*
+    /*
     margin: 5px;
     width: calc(100% - 30px);
     border-radius: 10px;
     */
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-	background-color: rgb(245, 245, 255);
-	box-shadow: 10px 5px 5px rgba(100, 100, 100, 0.1);
+    background-color: rgb(245, 245, 255);
+    box-shadow: 10px 5px 5px rgba(100, 100, 100, 0.1);
 
     &>div {
         display: flex;
         flex-direction: row;
         align-items: center;
-        
-        div {
+
+        .bouton-parametres {
             padding: 10px;
-            width: 30px;
-            height: 30px;
+            background: transparent;
             border-radius: 5px;
             margin-left: 10px;
             margin-right: 10px;
@@ -54,7 +54,7 @@ header {
             align-items: flex-start;
             width: 100%;
 
-            div {
+            .bouton-parametres {
                 position: fixed;
                 top: 15px;
                 right: 20px;
@@ -64,7 +64,7 @@ header {
             }
         }
     }
-    
+
     #bouton-menu-nav {
         display: none;
     }
@@ -132,58 +132,60 @@ header {
             transition: all 0.5s;
         }
 
-        ul li a:hover{
+        ul li a:hover {
             color: var(--couleur-principale);
             background-color: rgba(200, 200, 230, 0.5);
         }
 
-        ul li a:focus{
+        ul li a:focus {
             background-color: rgba(150, 150, 200, 0.5);
         }
     }
 
     @media screen and (max-width: 1000px) {
         display: flex;
-		flex-direction: column;
+        flex-direction: column;
 
         --taille-header-ouvert: 440px;
 
-        &.header-ouvert{
+        &.header-ouvert {
             animation-duration: 0.5s;
             animation-name: ouvrir-header;
             height: var(--taille-header-ouvert);
         }
 
-        &.header-ferme{
+        &.header-ferme {
             animation-duration: 0.5s;
             animation-name: fermer-header;
             height: 80px;
         }
 
         @keyframes ouvrir-header {
-            from{
+            from {
                 height: 80px;
             }
-            to{
+
+            to {
                 height: var(--taille-header-ouvert);
             }
         }
 
         @keyframes fermer-header {
-            from{
+            from {
                 height: 360px;
             }
-            to{
+
+            to {
                 height: 80px;
             }
         }
 
         @keyframes ouvrir-elt-nav {
-            from{
+            from {
                 color: rgba(0, 0, 0, 0);
             }
 
-            to{
+            to {
                 color: rgba(0, 0, 0, 1);
             }
         }
@@ -203,8 +205,10 @@ header {
                 display: inline-flex;
                 flex-direction: column;
                 width: 95%;
+
                 li {
                     width: 100%;
+
                     a {
                         display: inline-block;
                         width: calc(100% - 32px);
@@ -233,7 +237,7 @@ header {
                 background-color: rgba(150, 150, 200, 0.5);
             }
 
-            & > div {
+            &>div {
                 height: 32px;
                 width: 32px;
                 display: flex;
@@ -241,7 +245,9 @@ header {
                 justify-content: space-between;
             }
 
-            #bar-nav-1, #bar-nav-2, #bar-nav-3{
+            #bar-nav-1,
+            #bar-nav-2,
+            #bar-nav-3 {
                 height: 5px;
                 width: 100%;
                 background-color: black;
@@ -252,20 +258,20 @@ header {
             #bar-nav-1 {
                 transform-origin: center;
             }
-            
+
             #bar-nav-3 {
                 transform-origin: center;
             }
 
-            .ouvert #bar-nav-1{
+            .ouvert #bar-nav-1 {
                 transform: translate(0, 14px) rotate(-45deg);
             }
-            
-            .ouvert #bar-nav-2{
+
+            .ouvert #bar-nav-2 {
                 opacity: 0;
             }
-            
-            .ouvert #bar-nav-3{
+
+            .ouvert #bar-nav-3 {
                 transform: translate(0, -13px) rotate(45deg);
             }
         }
@@ -273,11 +279,11 @@ header {
 }
 
 .sombre header {
-	background-color: rgb(10, 10, 30);
-	box-shadow: 10px 5px 5px rgba(100, 100, 100, 0.1);
+    background-color: rgb(10, 10, 30);
+    box-shadow: 10px 5px 5px rgba(100, 100, 100, 0.1);
 
     &>div {
-        
+
         div {
             &:hover {
                 background-color: rgba(200, 200, 230, 0.5);
@@ -288,7 +294,7 @@ header {
             }
         }
     }
-    
+
     h1 {
         a {
             color: white;
@@ -300,12 +306,12 @@ header {
             color: white;
         }
 
-        ul li a:hover{
+        ul li a:hover {
             color: var(--couleur-tertiaire);
             background-color: rgba(200, 200, 230, 0.5);
         }
 
-        ul li a:focus{
+        ul li a:focus {
             background-color: rgba(150, 150, 200, 0.5);
         }
     }
@@ -313,11 +319,11 @@ header {
     @media screen and (max-width: 1000px) {
 
         @keyframes ouvrir-elt-nav {
-            from{
+            from {
                 color: rgba(255, 255, 255, 0);
             }
 
-            to{
+            to {
                 color: rgb(255, 255, 255, 1);
             }
         }
@@ -331,8 +337,119 @@ header {
                 background-color: rgba(150, 150, 200, 0.5);
             }
 
-            #bar-nav-1, #bar-nav-2, #bar-nav-3{
+            #bar-nav-1,
+            #bar-nav-2,
+            #bar-nav-3 {
                 background-color: white;
+            }
+        }
+    }
+}
+
+.anime header {
+
+    &>div {
+        .bouton-parametres {
+            transition: all 0.5s;
+
+            &:focus {
+
+                img {
+                    transform: rotate(360deg);
+                }
+            }
+
+            img {
+                transition: all 1s;
+            }
+        }
+    }
+
+    h1 {
+
+        a {
+            transition: all 0.5s;
+        }
+    }
+
+    nav {
+
+        ul li a {
+            transition: all 0.5s;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        &.header-ouvert {
+            animation-duration: 0.5s;
+            animation-name: ouvrir-header;
+            height: var(--taille-header-ouvert);
+        }
+
+        &.header-ferme {
+            animation-duration: 0.5s;
+            animation-name: fermer-header;
+            height: 80px;
+        }
+
+        @keyframes ouvrir-header {
+            from {
+                height: 80px;
+            }
+
+            to {
+                height: var(--taille-header-ouvert);
+            }
+        }
+
+        @keyframes fermer-header {
+            from {
+                height: 360px;
+            }
+
+            to {
+                height: 80px;
+            }
+        }
+
+        @keyframes ouvrir-elt-nav {
+            from {
+                color: rgba(0, 0, 0, 0);
+            }
+
+            to {
+                color: rgba(0, 0, 0, 1);
+            }
+        }
+
+        #bouton-menu-nav {
+
+            transition: all 0.5s;
+
+            #bar-nav-1,
+            #bar-nav-2,
+            #bar-nav-3 {
+                transition: 0.4s;
+            }
+
+            #bar-nav-1 {
+                transform-origin: center;
+            }
+
+            #bar-nav-3 {
+                transform-origin: center;
+            }
+
+            .ouvert #bar-nav-1 {
+                transform: translate(0, 14px) rotate(-45deg);
+            }
+
+            .ouvert #bar-nav-2 {
+                opacity: 0;
+            }
+
+            .ouvert #bar-nav-3 {
+                transform: translate(0, -13px) rotate(45deg);
             }
         }
     }

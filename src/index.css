@@ -11,11 +11,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
+html,
+body {
     font-family: Poppins, Calibri, Arial, sans-serif;
 
-	scroll-behavior: smooth;
-	overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
     overflow-x: hidden;
 
     width: 100vw;
@@ -28,44 +29,46 @@ html, body {
 }
 
 @font-face {
-	font-family: "Poppins";
-	src: url("/polices/Poppins/Poppins-Regular.ttf");
+    font-family: "Poppins";
+    src: url("/polices/Poppins/Poppins-Regular.ttf");
 }
 
 @font-face {
-	font-family: "Poppins";
-  font-weight: bold;
-	src: url("/polices/Poppins/Poppins-Bold.ttf");
+    font-family: "Poppins";
+    font-weight: bold;
+    src: url("/polices/Poppins/Poppins-Bold.ttf");
 }
 
 @font-face {
-	font-family: "GoodTiming";
-  font-weight: bold;
-	src: url("/polices/Good Timing/good timing bd.otf");
+    font-family: "GoodTiming";
+    font-weight: bold;
+    src: url("/polices/Good Timing/good timing bd.otf");
 }
 
 #root {
-  margin: 0 auto;
-  padding: 3%;
-  text-align: left;
+    margin: 0 auto;
+    padding: 3%;
+    text-align: left;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
+
 a:hover {
-  color: #747bff;
+    color: #747bff;
 }
 
 .sombre a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
-.sombre  a:hover {
-  color: #747bff;
+
+.sombre a:hover {
+    color: #747bff;
 }
 
 body {
@@ -98,6 +101,22 @@ body.sombre .sombre-affichage {
     display: block;
 }
 
+.animations-desactives {
+    display: block;
+}
+
+body.anime .animations-desactives {
+    display: none;
+}
+
+.animations-actives {
+    display: none;
+}
+
+body.anime .animations-actives {
+    display: block;
+}
+
 h1 {
     font-size: 3em;
     line-height: 1.1;
@@ -123,9 +142,11 @@ button {
     cursor: pointer;
     transition: all 0.25s;
 }
+
 button:hover {
     background-color: var(--couleur-tertiaire);
 }
+
 button:focus,
 button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
@@ -135,6 +156,7 @@ button:focus-visible {
     h1 {
         font-size: 2em;
     }
+
     h2 {
         font-size: 1.5em;
     }
@@ -144,6 +166,7 @@ button:focus-visible {
     h1 {
         font-size: 1.5em;
     }
+
     h2 {
         font-size: 1.2em;
     }

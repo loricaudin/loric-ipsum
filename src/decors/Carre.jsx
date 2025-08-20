@@ -1,4 +1,6 @@
-export default function Carre({taille, x, y, couleur}) {
+import "../App.scss"
+
+export default function Carre({ taille, x, y, couleur }) {
     const styleCarre = {
         position: "absolute",
         left: x,
@@ -16,6 +18,6 @@ export default function Carre({taille, x, y, couleur}) {
     } else {
         styleCarre.backgroundColor = couleur
     }
-    return <span style={{}}><span className={"carre"} style={styleCarre}></span>
+    return <span className={"carre"}><span style={styleCarre}></span>
     </span>
 }

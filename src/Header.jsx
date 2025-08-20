@@ -78,8 +78,8 @@ export default function Header() {
                 </div>
                 <div>
                     Animations lourdes :
-                    <button className="animations-desactives" onClick={basculerAnimations}>Activer animations</button>
-                    <button className="animations-actives" onClick={basculerAnimations}>Désactiver animations</button>
+                    <button className="animations-desactives" onClick={basculerAnimations}>Activer les animations</button>
+                    <button className="animations-actives" onClick={basculerAnimations}>Désactiver les animations</button>
                 </div>
             </Popup>
         }

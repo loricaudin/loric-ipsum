@@ -1,1 +1,4 @@
 ressources_local/
+.vite
+.vscode
+node_modules

@@ -49,7 +49,7 @@ export default function Technologies() {
                             couleur={""}
                         />
                         <Technologie
-                            nom={"Android Java et Kotlin (Marques déposés)"}
+                            nom={"Android Java et Kotlin (Marques déposées)"}
                             texte={"Android Java et Kotlin"}
                             type={"mobile"}
                             couleur={"rgb(61, 220, 132)"}
@@ -262,6 +262,18 @@ export default function Technologies() {
                             texte={"Git"}
                             icone={"git"}
                             couleur={"rgb(255, 116, 94)"}
+                        />
+                        <Technologie
+                            nom={"WinCC (Marque déposée par Siemens)"}
+                            texte={"WinCC"}
+                            type={"application de supervision"}
+                            couleur={"#26bfc6"}
+                        />
+                        <Technologie
+                            nom={"AVEVA Plant Scada et Cicode (Marque déposée par Schneider)"}
+                            texte={"AVEVA Plant Scada"}
+                            type={"application de supervision"}
+                            couleur={"#3b1952"}
                         />
                     </div>
                 </div>

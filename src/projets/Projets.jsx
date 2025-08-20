@@ -205,20 +205,25 @@ export default function Projets() {
                         listeTechnologies={["HTML", "CSS"]}
                     />
                 </div>
-                {/* <div className="liste-projets">
+                <div className="liste-projets">
                     <h2>Projets professionnels</h2>
                     <Projet
-                        nomProjet={""}
-                        anneeCreation={2025}
+                        nomProjet={"Applications de supervision de lignes de production"}
+                        anneeCreation={"2024-2025"}
+                        type={"Application Windows"}
                         description={`
-                            
+                            Durant mon stage et mon alternance dans l'entreprise KPI Technologie,
+                            j'ai réalisé plusieurs applications de supervision pour différents
+                            clients industriels. Ces applications communiquent avec des automates
+                            permettant le pilotage et le suivi de la ligne de production.
+                            J'ai pu réaliser au total 12 projets pour un total de 5 clients
+                            industriels.
                         `}
-                        lienTelechargement={""}
-                        lienSite={""}
-                        lienCodeSource={""}
-                        listeImages={[]}
+                        /* listeImages={["kpi-projets-01", "kpi-projets-02"]} */
+                        listeCompetences={["BUT C1", "BUT C2", "BUT C3", "BUT C4", "BUT C5", "BUT C6"]}
+                        listeTechnologies={["WinCC", "VBS", "VB6", "VBA", "C", "C++", "AVEVA Plant Scada", "Cicode", "JavaScript"]}
                     />
-                </div> */}
+                </div>
             </div>
         </Section>
     </>

@@ -66,7 +66,7 @@ export default function Projets() {
                         lienSite={""}
                         lienCodeSourceFront={"https://github.com/loricaudin-projets-academiques/Ramses-Frontend"}
                         lienCodeSourceBack={"https://github.com/loricaudin-projets-academiques/Ramses-Backtend"}
-                        /* listeImages={["iut-ramses-01"]} */
+                        listeImages={["iut-ramses-01"]}
                         listeCompetences={["BUT C1", "BUT C2", "BUT C3", "BUT C4", "BUT C5", "BUT C6"]}
                         listeTechnologies={["Angular", "Nest", "Prisma", "MySQL", "Docker"]}
                     />

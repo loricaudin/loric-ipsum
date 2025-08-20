@@ -70,7 +70,7 @@ export default function Header() {
             </button>
         </div>
         {(popupOuverte == true) &&
-            <Popup titre="Paramètre du site" actionFermeture={function () { setPopupOuverte(!popupOuverte) }} >
+            <Popup titre="Paramètres du site" actionFermeture={function () { setPopupOuverte(!popupOuverte) }} >
                 <div>
                     Mode d'affichage :
                     <button className="clair-affichage" onClick={basculerClairSombre}>Activer mode sombre</button>

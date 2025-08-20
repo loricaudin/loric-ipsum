@@ -12,6 +12,10 @@ import Footer from "./Footer"
 
 function App() {
 
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches == true) {
+        document.body.className = "sombre anime";
+    }
+
     return (
         <>
             <Header />
